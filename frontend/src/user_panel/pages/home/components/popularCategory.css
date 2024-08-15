@@ -1,0 +1,322 @@
+.main-popular-category-container .watch-category svg {
+	fill: var(--white-bg);
+}
+
+.main-popular-category-container .watch-category {
+	color: var(--white-bg);
+}
+
+.watch-category {
+	width: 400px;
+	background-image: url(../../../assets/images/UI-images/store-card-40-watch-s9-202309.jpg);
+	height: 550px;
+	background-size: 110% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 20px;
+}
+
+.watch-category > ul {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	padding: 0px;
+	align-items: center;
+	padding-top: 30px;
+	gap: 15px;
+}
+
+.cateogry-name-section-large {
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.watch-category > ul > li {
+	width: max-content;
+	height: max-content;
+}
+
+.main-popular-category-container {
+	width: 100%;
+}
+
+.popular-category-container {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.popular-category-container .showcase-link {
+	margin-top: 0px;
+}
+
+.first-level > div,
+.second-level > div,
+.third-level > div {
+	position: relative;
+}
+
+.shop-category-button {
+	position: absolute;
+	width: max-content;
+	bottom: 20px;
+}
+
+.first-level {
+	width: 91.5%;
+	display: flex;
+	padding: 0px;
+	justify-content:center;
+	align-items: center;
+	gap: 30px;
+	margin: auto;
+}
+
+.cateogry-name-section {
+	gap: 2px;
+	font-weight: 500;
+}
+
+.iphone-homepod-category {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	height: 550px;
+	justify-content: space-between;
+	width: 60%;
+	max-width: 609px;
+}
+
+.iphone-category {
+	background-color: var(--dark-grey);
+	position: relative;
+	height: 47.5%;
+	width: 100%;
+	border-radius: 20px;
+	background-image: url(../../../assets/images/UI-images/iphone\ 15.png);
+	background-size: 230px 100%;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	padding-right: 8%;
+	max-width: 609px;
+}
+
+.iphone-category .shop-category-button {
+	position: relative;
+	bottom: 0;
+}
+
+.iphone-category ul {
+	padding: 0;
+	margin: 0;
+	gap: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	align-items: center;
+	justify-content: center;
+}
+
+.homepod-category {
+	height: 47.5%;
+	width: 100%;
+	background-image: url(../../../assets/images/UI-images//homepod.png);
+	background-size: 400px 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--dark-grey);
+	border-radius: 20px;
+	position: relative;
+	max-width: 609px;
+}
+
+.homepod-category .shop-category-button {
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.homepod-category .shop-category-button .showcase-link {
+	background-color: var(--primary-color);
+	color: var(--white-bg);
+}
+
+.homepod-category .shop-category-button .showcase-link:hover {
+	background-color: var(--secondary-color);
+}
+
+.macbook-category {
+	height: 350px;
+	margin: auto;
+	width: 91.5%;
+	background-image: url("../../../assets/images/UI-images/macbooks.png");
+	background-size: 450px 160%;
+	background-repeat: no-repeat;
+	background-position: 5% 80%;
+	max-width: 1040px;
+}
+
+.third-level {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.ipad-category,
+.airpod-category {
+	width: 44.5%;
+	background-color: var(--dark-grey);
+	height: 550px;
+	border-radius: 20px;
+	max-width: 506px;
+	position: relative;
+    padding: 20px 10px;
+}
+
+.ipad-category ul,
+.airpod-category ul {
+	width: max-content;
+	padding: 0;
+	margin: auto;
+	display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ipad-category {
+	background-image: url("../../../assets/images/UI-images/ipads.png");
+	background-size: 400px 85%;
+	background-repeat: no-repeat;
+    background-position: 50% 100%;
+}
+
+.ipad-category .shop-category-button{
+    position: relative;
+    bottom: 0;
+    margin-top: 15px;
+}
+
+.airpod-category .shop-category-button{
+    bottom: 20px;
+    height: max-content;
+}
+
+.airpod-category img {
+	width: 65%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 5;
+}
+
+.airpod-category .cateogry-name-section-large{
+    font-size: 85px;
+    max-width: min-content;
+    margin: 20px;
+    text-shadow: 1px 1px 3px #636363;
+	text-align: center;
+}
+
+@media screen and (max-width:1100px) {
+
+	.cateogry-name-section-large{
+		font-size: 25px;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.first-level, .third-level{
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.main-popular-category-container .watch-category{
+		width: 100%;
+		max-width: 450px;
+	}
+
+	.iphone-homepod-category{
+		width: 100%;
+		max-width: 450px;
+	}
+
+	.iphone-category{
+		background-size: 185px 80%;
+		background-position: 0 center;
+		padding-right: 4%;
+	}
+
+	.homepod-category{
+		background-size: 300px 60%;
+	}
+
+	.ipad-category, .airpod-category{
+		width: 100%;
+		padding: 20px 0;
+	}
+
+	.airpod-category .cateogry-name-section-large{
+		font-size: 70px;
+	}
+
+	.macbook-category{
+		width: 100%;
+		padding: 0;
+		justify-content: center;
+		align-items: flex-start;
+		padding-top: 20px;
+		background-position: center 100%;
+		height: 500px;
+		background-size: 300px 350px;
+		max-width: 450px;
+	}
+}
+
+@media screen and (max-width:390px) {
+	.main-popular-category-container .watch-category{
+		background-size: 140% 100%;
+	}
+}
+
+@media screen and (max-width:360px) {
+
+	.first-level, .iphone-homepod-category{
+		height: max-content;
+	}
+
+	.iphone-homepod-category{
+		gap: 30px;
+	}
+
+	.homepod-category{
+		height: 250px;
+	}
+
+	.first-level .iphone-category{
+		height: 400px;
+		background-size: 180px 200px;
+		background-position: center 100%;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	.iphone-category ul{
+		padding-top: 20px;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.airpod-category .cateogry-name-section-large{
+		font-size: 60px;
+	}
+}

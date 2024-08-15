@@ -1,0 +1,115 @@
+.main-product-card-container{
+    color: var(--black-bg);
+    height: 336px;
+    width: 100%;
+}
+
+.product-card-image-container{
+    width: 100%;
+    height: 195px;
+    background-color: var(--light-grey);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-card-image{
+    max-width: 100%;
+    max-height: 100%;
+}
+.product-card-details{
+    padding: 8px;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.product-card-name{
+    font-weight: 700;
+}
+.product-card-price{
+    font-size: 16px;
+}
+.product-card-buy>a{
+    text-decoration: none;
+    color: var(--white-bg);
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    width: 78px;
+    height: 41px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popular-products-container{
+    height: 350px;
+}
+
+.product-card-buy>a:hover{
+    background-color: var(--secondary-color);
+}
+
+.popular-products-container .swiper{
+    width: 90%;
+    height: 100%;
+}
+
+.popular-products-container .swiper-scrollbar-drag{
+    background: var(--black-bg);
+}
+
+.popular-heading{
+    font-size: 40px;
+    color: var(--black-bg);
+    font-weight: 800;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    width: max-content;
+}
+
+.popular-products-container .swiper-button-next:after, .popular-products-container .swiper-button-prev:after{
+    font-size: 20px;
+    color: #6c6c6c;
+    font-weight: bolder;
+    -webkit-text-stroke: 1px;
+}
+
+.popular-products-container .swiper-button-next, .popular-products-container .swiper-button-prev{
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #e1e1e142, #e1e1e158);
+    border: 1.5px solid var(--dark-grey);
+    height: 40px;
+    width: 41px;
+}
+
+@media screen and (max-width:500px) {
+    h1.popular-heading{
+        font-size: 30px;
+    }
+
+    .popular-products-container .swiper{
+        width: 92%;
+    }
+
+    .popular-products-container .swiper-button-next, .popular-products-container .swiper-button-prev{
+        display: none;
+    }
+
+    .main-product-card-container{
+        width: 100%;
+    }
+
+    .product-card-image-container{
+        height: 165px;
+    }
+
+    .product-card-name{
+        font-weight: 600;
+    }
+    
+}

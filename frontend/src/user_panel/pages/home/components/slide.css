@@ -1,0 +1,123 @@
+.showcase-link {
+	text-decoration: none;
+	color: var(--primary-color);
+	font-size: 13px;
+	font-weight: 800;
+	border: 2px solid var(--primary-color);
+	padding: 12px;
+	border-radius: 4px;
+	margin-top: 20%;
+}
+
+.showcase-link:hover {
+	background-color: var(--primary-color);
+	color: var(--white-bg);
+}
+
+.showcase-category {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	font-weight: 700;
+	width: max-content;
+	font-size: 20px;
+}
+
+.apple-logo {
+	fill: var(--white-bg);
+}
+
+.showcase-detail-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.showcase-model {
+	font-size: 25px;
+	font-weight: 800;
+	color: var(--primary-color);
+}
+
+.showcase-large-category-name {
+	font-size: 60px;
+	font-weight: 700;
+}
+
+
+.hero-image {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.showcase-image {
+	width: 100%;
+	height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-content-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.color-variants .color.active{
+    border-color: var(--white-bg);
+    padding: 3px;
+}
+
+.color-variants .color{
+    width: 38px;
+    height: 38px;
+    transition: .2s;
+    border-radius: 50%;
+    border: 3px solid transparent;
+}
+
+.color-variants .color:hover{
+    cursor: pointer;
+}
+
+.color-variants{
+    display: flex;
+    gap: 15px;
+    border-radius: 40px;
+    position: absolute;
+    bottom: -15px;
+    padding: 15px;
+    right: 15px;
+}
+
+@media screen and (max-width:1100px){
+    .showcase-large-category-name{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .slide-content-container{
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .color-variants .color{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-height: 859px) and (max-width:500px) {
+    .color-variants{
+        gap: 8px;
+        bottom: -7vh;
+    }
+}
+
