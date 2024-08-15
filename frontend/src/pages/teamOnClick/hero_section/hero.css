@@ -1,0 +1,76 @@
+.team-onclick-hero-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  gap: 125px;
+  padding-top: 200px;
+}
+
+.team-onclick-hero-section * {
+  font-family: var(--font-family);
+}
+
+.team-onclick-hero-section header h1 {
+  color: #fff;
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -1.52px;
+  margin: 0;
+}
+.team-onclick-hero-section header h3 {
+  color: #fff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.team-onclick-hero-section-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team-onclick-hero-section-left > span {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.team-onclick-hero-section-left > p {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.team-onclick-hero-section-left > header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.team-onclick-hero-section-right-socials {
+  display: flex;
+  gap: 30px;
+}
+
+.team-onclick-hero-section-right-socials img {
+  height: 44px;
+  width: 44px;
+}
+
+.team-onclick-hero-section-right-socials img:hover{
+    transform: scale(1.2);
+}
+
+.team-onclick-hero-section-right img {
+  width: 524px;
+  height: 520px;
+}

@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --primary-orange: #fbb03b;
+  --on-orange: #80530e;
+  --orange-light: #f5c477;
+  --primary-green: #26ce3d;
+  --sf-green: #2c8338;
+  --sf-green-light: #24c23a;
+  --green-fade: #c3fbcb;
+  --primary-white: #fefefe;
+  --on-white: #f4f4f4;
+  --strokecolor-white: #e7e7e7;
+  --on-white-light: #fdfdfd;
+  --white-fade: #ececec;
+  --primary-black: #1d1d1d;
+  --on-black: #232323;
+  --strokecolor-black: #3d3d3d;
+  --black-fade: #7e7e7e;
+  --sf-on-pm-black: #2c2c2c;
+  --feedback-red: #f54a4a;
+
+  --font-family: "Inter", sans-serif;
+
+  --border-radius-16: 16px;
+  --border-radius-24: 24px;
+  --border-radius-30: 30px;
+  --border-radius-32: 32px;
+  --border-radius-40: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  scroll-behavior: smooth;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  box-sizing: border-box;
+  font-size: var(--font-family);
+  transition: 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body, html{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::-webkit-scrollbar{
+  width: 8px;
+  background-color: var(--strokecolor-black);
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar-thumb{
+  background-color: var(--strokecolor-white);
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  outline: transparent;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
 }

@@ -1,0 +1,99 @@
+.navbar-component {
+  display: flex;
+  max-width: 1268px;
+  width: 95%;
+  height: 85px;
+  padding: 30px 20px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--bd-radius-64, 64px);
+  opacity: var(--sds-size-stroke-border);
+  background: var(--black-on-black, #232323);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  justify-content: space-around;
+  gap: 60px;
+}
+
+.navbar-component * {
+  font-family: var(--font-family);
+  background: transparent;
+}
+
+.navbar-component > * {
+  background-color: transparent;
+  background: transparent;
+}
+
+.navbar-component-logo-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-component-logo-label img {
+  width: 56px;
+  height: 56px;
+}
+
+.navbar-component-logo-label span {
+  color: var(--white-primary-white, var(--primary-white, #fefefe));
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.navbar-component-navlinks {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  flex: 1 0 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  background-color: transparent;
+}
+
+.navbar-component-navlinks a {
+  color: var(--white-on-white, #f4f4f4);
+  min-width: 60px;
+}
+
+.navbar-component-navlinks li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+}
+
+.navbar-component-request-service > a {
+  display: flex;
+  padding: 20px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  background: var(--primary-white, #fefefe);
+  color: var(--black-primary-black, #1d1d1d);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.navbar-component-request-service > a:hover {
+  background: var(--white-on-white, #e0e0e0);
+}
+
+a.active-navbar-link,
+.navbar-component-navlinks > a:hover {
+  font-weight: 600 !important;
+  color: var(--primary-white) !important;
+}
