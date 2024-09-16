@@ -19,7 +19,7 @@ const AboutHeroComponent = () => {
               Lorem ipsum dolor sit amet consectetur. Quis orci ses neque
               rhoncus. Integer commodo Lorem ipsum dolor sit amet consepsum
               dolor sit amet consectetur. Quis orci sed fesi egestas neque
-              rhoncus. Integer commodo Lorem ipsum dolor sit amet consectetur. Q
+              rhoncus. Integer commodo Lorem ipsum dolor sit amet consectetur.
             </p>
           </div>
         </div>

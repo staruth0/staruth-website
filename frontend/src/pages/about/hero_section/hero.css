@@ -53,23 +53,16 @@
   flex-direction: column;
   justify-content: center;
   align-self: stretch;
-
   color: #fff;
-
-  /* Title/title-large-bold */
-  font-family: Inter;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin: 0;
 }
 .about-hero-section-contentTwo p {
   align-self: stretch;
-
   color: var(--white-primary-white, var(--primary-white, #fefefe));
-
-  /* body/body lg (desktop)/body lg light */
-  font-family: Inter;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
@@ -90,4 +83,5 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin: 0;
 }

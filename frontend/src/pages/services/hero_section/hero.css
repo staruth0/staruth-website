@@ -1,0 +1,23 @@
+.service-hero-section-container * {
+  font-family: var(--font-family);
+}
+
+.service-hero-section-container {
+  width: 1033px;
+  height: 251px;
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 230px;
+  color: white;
+  margin-bottom: 120px;
+  padding: 0px 80px;
+  background-color: var(--primary-black);
+}
+
+.service-hero-section-container p {
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 48px;
+  height: 100%;
+}

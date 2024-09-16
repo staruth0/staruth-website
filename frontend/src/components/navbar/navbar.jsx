@@ -3,12 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/icons/logoPNG 1.svg";
 import "./navbar.css";
 
-const NavbarComponent = () => {
-
-    const currentUrl = useLocation();
+const NavbarComponent = ({whiteNavbar}) => {
+  const currentUrl = useLocation();
 
   return (
-    <nav className="navbar-component">
+    <nav
+      className={whiteNavbar ? "navbar-component white-navbar" : "navbar-component"}
+    >
       <div className="navbar-component-logo-label">
         <img src={logo} alt="logo" />
         <span>Staruth tech</span>
@@ -17,7 +18,7 @@ const NavbarComponent = () => {
         <li>
           <Link
             to={"/"}
-            className={currentUrl.pathname=="/" ? "active-navbar-link" : ""}
+            className={currentUrl.pathname == "/" ? "active-navbar-link" : ""}
           >
             Home
           </Link>
@@ -25,7 +26,9 @@ const NavbarComponent = () => {
         <li>
           <Link
             to={"/about"}
-            className={currentUrl.pathname.includes("/about") ? "active-navbar-link" : ""}
+            className={
+              currentUrl.pathname.includes("/about") ? "active-navbar-link" : ""
+            }
           >
             About us
           </Link>
@@ -34,7 +37,9 @@ const NavbarComponent = () => {
           <Link
             to={"/portfolio"}
             className={
-              currentUrl.pathname.includes("/portfolio") ? "active-navbar-link" : ""
+              currentUrl.pathname.includes("/portfolio")
+                ? "active-navbar-link"
+                : ""
             }
           >
             Portfolio
@@ -44,7 +49,9 @@ const NavbarComponent = () => {
           <Link
             to={"/services"}
             className={
-              currentUrl.pathname.includes("/services") ? "active-navbar-link" : ""
+              currentUrl.pathname.includes("/services")
+                ? "active-navbar-link"
+                : ""
             }
           >
             Services
