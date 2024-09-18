@@ -7,7 +7,7 @@ const ServicesPage = () => {
   return (
     <div className="service-page-container">
       <ServicesHeroSection />
-      <ourServicesSection/>
+      <OurServicesSection />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import app from './app.js';
+import app from './main.js';
 import { connection } from './src/config/database.mjs';
 
 
