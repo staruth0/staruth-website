@@ -1,7 +1,7 @@
-import React from "react";
-import ServicesHeroSection from "./hero_section/hero";
-import OurServicesSection from "./our_services/services";
-import "./services.css";
+import React from 'react';
+import ServicesHeroSection from './components/hero_section/hero';
+import OurServicesSection from './components/our_services/services';
+import './services.css';
 
 const ServicesPage = () => {
   return (

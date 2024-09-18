@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./meet_team.css";
-import aboutMeetTeamSectionImage1 from "../../../assets/images/aboutMeetTeamSectionImage1.jpeg";
-import teamOnClickHeroImage from "../../../assets/images/teamOnClickHeroImage.png";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './meet_team.css';
+import aboutMeetTeamSectionImage1 from '../../../../assets/images/aboutMeetTeamSectionImage1.jpeg';
+import teamOnClickHeroImage from '../../../../assets/images/teamOnClickHeroImage.png';
 
 const MeetTeamComponent = () => {
   return (
@@ -14,7 +14,7 @@ const MeetTeamComponent = () => {
         </div>
         <div className="about-meet-team-section-content-description">
           <p>
-            We are a team of creative and dedicated young people passionate{" "}
+            We are a team of creative and dedicated young people passionate{' '}
             <br /> about seeing things work in our hands. We each share a
             devotion to <br /> helping budding businesses thrive with the
             application of modern soft <br /> tech
@@ -22,7 +22,7 @@ const MeetTeamComponent = () => {
         </div>
         <div className="about-meet-team-section-content-membersInfo">
           <div className="about-meet-team-section-content-membersProfile">
-            <Link to={"/about/team"}>
+            <Link to={'/about/team'}>
               <img
                 src={aboutMeetTeamSectionImage1}
                 className="about-meet-team-section-content-membersPhotoOne"
@@ -69,7 +69,7 @@ const MeetTeamComponent = () => {
             </div>
           </div>
           <div className="about-meet-team-section-content-membersProfile">
-            <Link to={"/about/team"}>
+            <Link to={'/about/team'}>
               <img
                 src={aboutMeetTeamSectionImage1}
                 className="about-meet-team-section-content-membersPhotoOne"
@@ -116,7 +116,7 @@ const MeetTeamComponent = () => {
             </div>
           </div>
           <div className="about-meet-team-section-content-membersProfile">
-            <Link to={"/about/team"}>
+            <Link to={'/about/team'}>
               <img
                 src={aboutMeetTeamSectionImage1}
                 className="about-meet-team-section-content-membersPhotoOne"
@@ -163,7 +163,7 @@ const MeetTeamComponent = () => {
             </div>
           </div>
           <div className="about-meet-team-section-content-membersProfile">
-            <Link to={"/about/team"}>
+            <Link to={'/about/team'}>
               <img
                 src={aboutMeetTeamSectionImage1}
                 className="about-meet-team-section-content-membersPhotoOne"
@@ -210,7 +210,7 @@ const MeetTeamComponent = () => {
             </div>
           </div>
           <div className="about-meet-team-section-content-membersProfile">
-            <Link to={"/about/team"}></Link>
+            <Link to={'/about/team'}></Link>
             <img
               src={aboutMeetTeamSectionImage1}
               className="about-meet-team-section-content-membersPhotoOne"
