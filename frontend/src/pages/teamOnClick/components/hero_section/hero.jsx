@@ -1,10 +1,10 @@
-import React from "react";
-import "./hero.css";
+import React from 'react';
+import './hero.css';
 
-import twitter_logo from "../../../assets/icons/prime_twitter_1.svg";
-import github_logo from "../../../assets/icons/github_1.svg";
-import team_onclick_hero_image from "../../../assets/images/team_onclick_hero_image.png";
-import linkedin_logo from "../../../assets/icons/linkedin_1.svg";
+import twitter_logo from '../../../../assets/icons/prime_twitter_1.svg';
+import github_logo from '../../../../assets/icons/github_1.svg';
+import team_onclick_hero_image from '../../../../assets/images/team_onclick_hero_image.png';
+import linkedin_logo from '../../../../assets/icons/linkedin_1.svg';
 
 const TeamOnClickHeroComponent = () => {
   return (

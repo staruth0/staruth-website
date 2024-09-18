@@ -1,15 +1,13 @@
-import React from "react";
-import logo from "../../assets/icons/logoPNG 1.svg";
-import facebook from "../../assets/icons/facebook.svg";
-import linkedIn from "../../assets/icons/linkedin.svg";
-import github from "../../assets/icons/github.svg";
-import twitter from "../../assets/icons/prime_twitter.svg";
-import { Link, useLocation } from "react-router-dom";
-import "./footer.css";
+import logo from '../../assets/icons/logoPNG 1.svg';
+import facebook from '../../assets/icons/facebook.svg';
+import linkedIn from '../../assets/icons/linkedin.svg';
+import github from '../../assets/icons/github.svg';
+import twitter from '../../assets/icons/prime_twitter.svg';
+import { Link, useLocation } from 'react-router-dom';
+import './footer.css';
 
 const FooterComponent = () => {
-
-    const currentLocation = useLocation();
+  const currentLocation = useLocation();
 
   return (
     <div className="footer-component">
@@ -24,9 +22,9 @@ const FooterComponent = () => {
         <ul className="footer-component-second-section-upper">
           <li>
             <Link
-              to={"/"}
+              to={'/'}
               className={
-                currentLocation.pathname == "/" ? "active-footer-link" : ""
+                currentLocation.pathname == '/' ? 'active-footer-link' : ''
               }
             >
               Home
@@ -34,11 +32,11 @@ const FooterComponent = () => {
           </li>
           <li>
             <Link
-              to={"/about"}
+              to={'/about'}
               className={
-                currentLocation.pathname.includes("/about")
-                  ? "active-footer-link"
-                  : ""
+                currentLocation.pathname.includes('/about')
+                  ? 'active-footer-link'
+                  : ''
               }
             >
               About us
@@ -46,11 +44,11 @@ const FooterComponent = () => {
           </li>
           <li>
             <Link
-              to={"/portfolio"}
+              to={'/portfolio'}
               className={
-                currentLocation.pathname.includes("/portfolio")
-                  ? "active-footer-link"
-                  : ""
+                currentLocation.pathname.includes('/portfolio')
+                  ? 'active-footer-link'
+                  : ''
               }
             >
               Portfolio
@@ -58,11 +56,11 @@ const FooterComponent = () => {
           </li>
           <li>
             <Link
-              to={"/services"}
+              to={'/services'}
               className={
-                currentLocation.pathname.includes("/services")
-                  ? "active-footer-link"
-                  : ""
+                currentLocation.pathname.includes('/services')
+                  ? 'active-footer-link'
+                  : ''
               }
             >
               Services
@@ -70,11 +68,11 @@ const FooterComponent = () => {
           </li>
           <li>
             <Link
-              to={"/contact"}
+              to={'/contact'}
               className={
-                currentLocation.pathname.includes("/contact")
-                  ? "active-footer-link"
-                  : ""
+                currentLocation.pathname.includes('/contact')
+                  ? 'active-footer-link'
+                  : ''
               }
             >
               Contact us
@@ -85,25 +83,25 @@ const FooterComponent = () => {
           <ul className="footer-component-second-section-lower-social-links">
             <li>
               <a href="">
-                <img src={linkedIn} alt="github" />
+                <img src={linkedIn} alt="LinkedIn" />
                 <span>LinkedIn</span>
               </a>
             </li>
             <li>
               <a href="">
-                <img src={twitter} alt="github" />
+                <img src={twitter} alt="Twitter" />
                 <span>Twitter</span>
               </a>
             </li>
             <li>
               <a href="">
-                <img src={facebook} alt="github" />
+                <img src={facebook} alt="Facebook" />
                 <span>Facebook</span>
               </a>
             </li>
             <li>
               <a href="">
-                <img src={github} alt="github" />
+                <img src={github} alt="Github" />
                 <span>Github</span>
               </a>
             </li>

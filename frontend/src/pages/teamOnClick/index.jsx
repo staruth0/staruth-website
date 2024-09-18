@@ -1,13 +1,13 @@
-import React from "react";
-import TeamOnClickHeroComponent from "./hero_section/hero";
-import TeamOnClickSkillsComponent from "./skills/skills";
-import "./team.css";
+import React from 'react';
+import TeamOnClickHeroComponent from './components/hero_section/hero';
+import TeamOnClickSkillsComponent from './components/skills/skills';
+import './team.css';
 
 const TeamPage = () => {
   return (
     <div className="about-page">
       <TeamOnClickHeroComponent />
-      <TeamOnClickSkillsComponent/>
+      <TeamOnClickSkillsComponent />
     </div>
   );
 };

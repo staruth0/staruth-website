@@ -1,0 +1,21 @@
+.btn-primary {
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  border: none;
+  background: var(--primary-green);
+  color: var(--primary-black);
+  font-weight: 600;
+
+  font-size: 18px;
+}
+
+.btn-black,
+.btn-primary-white {
+}
+
+.btn-white {
+}
