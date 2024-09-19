@@ -1,6 +1,6 @@
 import './button.css';
 
-const ButtonPrimary = ({ title }) => {
+const ButtonPrimary = ({ title, disabled }) => {
   return <button className="btn-primary">{title}</button>;
 };
 

@@ -107,8 +107,10 @@ const FooterComponent = () => {
             </li>
           </ul>
           <div className="footer-component-second-section-lower-copyright">
-            <span>&copy;</span>
-            <p>All Rights Reserved. 2024, Staruth Technologies</p>
+            <p>
+              <span>&copy;</span> All Rights Reserved. 2024, Staruth
+              Technologies
+            </p>
           </div>
         </div>
       </div>
