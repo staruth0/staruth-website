@@ -1,15 +1,11 @@
 .footer-component {
   background-color: var(--primary-white);
-  height: max-content;
+  height: fit-content;
   width: 100%;
   display: flex;
   margin-bottom: 10px;
-}
-
-.footer-component * {
-  background-color: transparent;
-  background: transparent;
-  font-family: var(--font-family);
+  margin-inline: auto;
+  max-width: 1440px;
 }
 
 .footer-component-first-section {
@@ -24,19 +20,16 @@
   border-right: 1.5px solid var(--strokecolor-white, #1d1d1d);
 }
 
-.footer-component-first-section > div > span {
-  color: #000;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-}
-
 .footer-component-first-section > div {
   display: flex;
   align-items: center;
   gap: 17px;
   align-self: stretch;
+}
+
+.footer-component-first-section > div > span {
+  font-size: 18px;
+  font-weight: 800;
 }
 
 .footer-component-second-section {
@@ -47,19 +40,17 @@
 
 .footer-component-second-section-upper {
   display: flex;
-  width: 946px;
   padding: 120px 180px 32px 80px;
   justify-content: space-between;
   align-items: flex-start;
   border-bottom: 1.5px solid var(--strokecolor-white, #1d1d1d);
+  max-width: 968px;
 }
 
 .footer-component-second-section-upper li a {
   color: #000;
   font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .footer-component-second-section-upper li a:hover,
@@ -75,7 +66,7 @@ a.active-footer-link {
 
 .footer-component-second-section-lower ul {
   display: flex;
-  width: 868px;
+  max-width: 868px;
   padding: 32px 80px;
   justify-content: space-between;
   align-items: flex-start;
@@ -90,9 +81,7 @@ a.active-footer-link {
 .footer-component-second-section-lower ul li a span {
   color: var(--black-primary-black, #1d1d1d);
   font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .footer-component-second-section-lower-copyright {
@@ -106,3 +95,5 @@ a.active-footer-link {
 .footer-component-second-section-lower-copyright > span {
   font-size: 25px;
 }
+
+/* media queries */

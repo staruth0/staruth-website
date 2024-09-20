@@ -1,9 +1,9 @@
-import React from "react";
-import "./our_services.css";
-import service_default_image from "../../../assets/images/ServiceImageDefault.png";
-import service_icon from "../../../assets/images/ServiceIconDefault.png";
-import left_navigator from "../../../assets/icons/expand_circle_left.png";
-import right_navigator from "../../../assets/icons/expand_circle_right.png";
+import React from 'react';
+import './our_services.css';
+import service_default_image from '../../../../assets/images/ServiceImageDefault.png';
+import service_icon from '../../../../assets/images/ServiceIconDefault.png';
+import left_navigator from '../../../../assets/icons/expand_circle_left.png';
+import right_navigator from '../../../../assets/icons/expand_circle_right.png';
 
 const OurServicesSection = () => {
   return (
