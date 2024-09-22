@@ -84,3 +84,10 @@
   width: 50px;
   height: 50px;
 }
+
+@media (max-width: 400px) {
+  .home-what-we-do-section-container-service-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 24px;
+  }
+}

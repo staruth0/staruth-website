@@ -1,0 +1,47 @@
+.home-what-we-care-about-section {
+  background: var(--black-primary-black, #1d1d1d);
+}
+
+.home-what-we-care-about-section h1 {
+  color: #fff;
+  max-width: 1060px;
+  margin-bottom: 104px;
+}
+
+.home-what-we-care-about-section p {
+  color: #fff;
+}
+
+.home-what-we-care-about-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  align-self: stretch;
+
+  margin-top: 2rem;
+}
+
+.home-what-we-care-about-card {
+  display: flex;
+  padding: 24px 32px;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: var(--bd-radius-24, 24px);
+  background: var(--black-on-black, #232323);
+}
+
+.home-what-we-care-about-card h3 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.home-what-we-care-about-card p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+}

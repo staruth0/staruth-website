@@ -69,6 +69,21 @@ const NavbarComponent = ({ whiteNavbar }) => {
       </div>
 
       {/* mobile nav */}
+      <div className="navbar-component-navlinks-container-mobile">
+        <button className="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div className="menu-items-mobile">
+          <span>Home</span>
+          <span>About</span>
+          <span>Portfolio</span>
+          <span>Services</span>
+          <span>Contact</span>
+        </div>
+      </div>
     </nav>
   );
 };
