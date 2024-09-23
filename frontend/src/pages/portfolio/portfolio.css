@@ -1,0 +1,123 @@
+
+
+/* Card styling */
+.portfolio-card {
+  margin-bottom: 10%;
+  color: #fff;
+}
+
+.swiper {
+  width: 100%;
+  max-height: 520px;
+}
+
+.swiper img {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-text {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-text h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.swiper-text p {
+  color: #008cff;
+  font-weight: 700;
+}
+
+.swiper-text a {
+  border: 2px solid #008cff;
+  width: 70%;
+  padding: 10px 15px;
+  color: #008cff;
+  margin-top: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.swiper-pagination span{ 
+    background-color: #26CE3D;
+    width: 15px;
+    height: 15px;
+}
+
+
+
+.swiper-navigations{
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.swiper-navigations span{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #26CE3D;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.swiper-navigations span.active{
+    background-color: #26CE3D;
+}
+
+/* Card bottom styling */
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.card-bottom-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-bottom div {
+  display: flex;
+  gap: 20px;
+}
+
+.card-bottom-text a {
+  padding: 8px 10px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.see-more-btn {
+  padding: 10px 20px;
+  background-color: #26CE3D;
+  height: fit-content;
+  color: #000;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.card-bottom h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-bottom span {
+  font-size: 0.8rem;
+  font-weight: 200;
+}
