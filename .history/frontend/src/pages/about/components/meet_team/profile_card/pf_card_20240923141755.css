@@ -1,0 +1,66 @@
+  .about-meet-team-section-content-membersProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:12px;
+    opacity: 0.8;
+  }
+  .about-meet-team-section-content-membersPhotoOne {
+    width: 280px;
+    height: 360px;
+    border-radius: var(--bd-radius-8, 8px);
+    opacity: var(--sds-size-stroke-border);
+    object-fit: cover;
+    filter:grayscale(100%);
+  }
+  .about-meet-team-section-content-membersProfileBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    opacity: var(--sds-size-stroke-border);
+  
+  }
+  .about-meet-team-section-content-membersRole {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    opacity: var(--sds-size-stroke-border);
+  }
+  .about-meet-team-section-content-membersRole h4 {
+    align-self: stretch;
+    color: var(--black-primary-black, #1d1d1d);
+    /* body/body lg (desktop)/body lg heavy */
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    margin:0;
+    line-height: normal;
+  
+    opacity: var(--sds-size-stroke-border);
+  }
+  .about-meet-team-section-content-membersRole p {
+    align-self: stretch;
+    margin:0;
+    color: var(--black-primary-black, #1d1d1d);
+  
+    /* Others/label */
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  
+    opacity: var(--sds-size-stroke-border);
+  }
+  .about-meet-team-section-content-membersSocials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--sds-size-space-400);
+    opacity: 0.2;
+  }
+  
+  
