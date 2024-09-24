@@ -5,7 +5,12 @@
     gap:10px;
     opacity: 0.8;
   }
- 
+  .about-meet-team-section-content-membersProfile:hover{
+    opacity:1;
+  }
+  .about-meet-team-section-content-membersProfile:hover img{
+    opacity:1;
+  }
   .about-meet-team-section-content-membersPhotoOne {
     width: 280px;
     height: 370px;
@@ -56,17 +61,6 @@
   
     opacity: var(--sds-size-stroke-border);
   }
-  .about-meet-team-section-content-membersSocials {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: var(--sds-size-space-400);
-    opacity: 0.2;
-  }
-  .about-meet-team-section-content-membersProfile:hover{
-    opacity:1;
-  }
-  .about-meet-team-section-content-membersProfile:hover   .about-meet-team-section-content-membersSocials{
-    opacity:1;
-  }
+ 
+  
   
