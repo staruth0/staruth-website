@@ -1,1 +1,9 @@
+.home-page h1 {
+  font-size: 76px;
+}
 
+@media (max-width: 560px) {
+  .home-page h1 {
+    font-size: 56px;
+  }
+}
