@@ -20,6 +20,17 @@ const getProjects = async () => {
     }
 };
 
+const getProjectById = async (id) => {
+    try {
+        const project = await Project.findById(id);
+        if (!project) throw new Error("Project not found");
+        return project;
+    } catch (error) {
+        console.error(error);
+        throw new Error("Error fetching project by ID");
+    }
+};
+
 const updateProject = async (id, body) => {
     try {
         const updatedProject = await Project.findByIdAndUpdate(id, body, { new: true });
@@ -40,4 +51,6 @@ const deleteProject = async (id) => {
     }
 };
 
-export { createProject, getProjects, updateProject, deleteProject };
+
+
+export { createProject, getProjects,getProjectById, updateProject, deleteProject };

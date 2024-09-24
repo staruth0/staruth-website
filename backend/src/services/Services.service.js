@@ -20,6 +20,17 @@ const getServices = async () => {
     }
 };
 
+const getServiceById = async (id) => {
+    try {
+        const service = await Service.findById(id);
+        if (!service) throw new Error("Service not found");
+        return service;
+    } catch (error) {
+        console.error(error);
+        throw new Error("Error fetching service by ID");
+    }
+};
+
 const updateService = async (id, body) => {
     try {
         const updatedService = await Service.findByIdAndUpdate(id, body, { new: true });
@@ -40,4 +51,4 @@ const deleteService = async (id) => {
     }
 };
 
-export { createService, getServices, updateService, deleteService };
+export { createService, getServices,getServiceById, updateService, deleteService };

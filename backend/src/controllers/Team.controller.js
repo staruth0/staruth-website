@@ -1,5 +1,5 @@
 import httpStatus from "http-status";
-import { createTeamMember, getTeamMembers, updateTeamMember, deleteTeamMember } from "../services/Team.service.js";
+import { createTeamMember, getTeamMembers,getTeamMemberById, updateTeamMember, deleteTeamMember } from "../services/Team.service.js";
 
 const teamController = {
     addTeamMember: async (req, res) => {
@@ -22,6 +22,15 @@ const teamController = {
         } catch (error) {
             console.error(error);
             res.status(httpStatus.INTERNAL_SERVER_ERROR).json({ message: "There was an error in the server" });
+        }
+    },
+    getTeamMemberById: async (req, res) => {
+        try {
+            const { id } = req.params;
+            const teamMember = await getTeamMemberById(id);
+            res.status(200).json(teamMember);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
         }
     },
 
