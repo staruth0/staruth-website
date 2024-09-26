@@ -1,5 +1,5 @@
 import httpStatus from "http-status";
-import { createService, getServices, updateService, deleteService } from "../services/Services.service.js";
+import { createService, getServices,getServiceById, updateService, deleteService } from "../services/Services.service.js";
 
 const serviceController = {
     addService: async (req, res) => {
@@ -24,6 +24,19 @@ const serviceController = {
             res.status(httpStatus.INTERNAL_SERVER_ERROR).json({ message: "There was an error in the server" });
         }
     },
+
+    getServiceById: async (req, res) => {
+        try {
+            const { id } = req.params;
+            const service = await getServiceById(id);
+            res.status(200).json(service);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    },
+
+
+
 
     updateService: async (req, res) => {
         try {
