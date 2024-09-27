@@ -20,6 +20,17 @@ const getTeamMembers = async () => {
     }
 };
 
+const getTeamMemberById = async (id) => {
+    try {
+        const teamMember = await Team.findById(id);
+        if (!teamMember) throw new Error("Team member not found");
+        return teamMember;
+    } catch (error) {
+        console.error(error);
+        throw new Error("Error fetching team member by ID");
+    }
+};
+
 const updateTeamMember = async (id, body) => {
     try {
         const updatedTeamMember = await Team.findByIdAndUpdate(id, body, { new: true });
@@ -40,4 +51,4 @@ const deleteTeamMember = async (id) => {
     }
 };
 
-export { createTeamMember, getTeamMembers, updateTeamMember, deleteTeamMember };
+export { createTeamMember, getTeamMembers,getTeamMemberById, updateTeamMember, deleteTeamMember };

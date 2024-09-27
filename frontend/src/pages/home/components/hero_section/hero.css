@@ -4,7 +4,6 @@
 }
 
 .home-hero-section {
-  min-height: calc(100vh - 56px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,5 +96,11 @@
 @media (max-width: 988px) {
   .home-hero-section-container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .home-hero-section-container-btn-grp {
+    flex-direction: column;
   }
 }

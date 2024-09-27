@@ -5,6 +5,7 @@ const serviceSchema = new mongoose.Schema({
   title: { type: String, required: true },
   shortDescription: { type: String, required: true },
   longDescription: { type: String },
+  gallery: [{type: String}],
   category: { type: String, required: true }
 });
 

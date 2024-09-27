@@ -1,5 +1,5 @@
 import httpStatus from "http-status";
-import { createProject, getProjects, updateProject, deleteProject } from "../services/Project.service.js";
+import { createProject, getProjects, updateProject, deleteProject, getProjectById } from "../services/Project.service.js";
 
 const projectController = {
     addProject: async (req, res) => {
@@ -25,6 +25,16 @@ const projectController = {
         }
     },
 
+    getProjectById : async (req, res) => {
+        try {
+            const { id } = req.params;
+            const project = await getProjectById(id);
+            res.status(200).json(project);
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    },
+
     updateProject: async (req, res) => {
         try {
             const updatedProject = await updateProject(req.params.id, req.body);
@@ -44,7 +54,7 @@ const projectController = {
             if (!deletedProject) {
                 return res.status(httpStatus.NOT_FOUND).json({ message: "Project not found" });
             }
-            res.status(httpStatus.NO_CONTENT).end();
+            res.status(httpStatus.OK).end();
         } catch (error) {
             console.error(error);
             res.status(httpStatus.INTERNAL_SERVER_ERROR).json({ message: "There was an error in the server" });

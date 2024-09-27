@@ -1,0 +1,264 @@
+.about-slidable-section {
+  /* layout */
+  display: flex;
+  padding: var(--pg-pt, 56px) 0px var(--pg-pb, 88px) 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 144px;
+  align-self: stretch;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+  background: var(--sf-on-pm-black, #2c2c2c);
+}
+.about-slidable-section-underlinedHeading {
+  /* layout */
+  display: flex;
+  width: 1268px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 18px;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+.about-slidable-section-underlinedHeading p {
+  /* layout */
+  width: 690px;
+  /* Typography */
+  color: var(--green-sf-green, #2c8338);
+  text-align: right;
+
+  /* Display/display large */
+  font-family: Inter;
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px; /* 105.263% */
+  letter-spacing: -1.52px;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+.about-slidable-section-underline{
+  /* layout */
+  width: 1268px;
+  height: 1px;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+  background: #2c8338;
+}
+.about-slidable-section-ValueSlide {
+  /* layout */
+  display: flex;
+  height: 560px;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+.about-slidable-section-ValueCardSlide {
+  /* layout */
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 80px;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+.about-slidable-section-ValueCardSlide1 {
+  /* layout */
+  display: flex;
+  height: 540px;
+  padding: 171px 0px 171px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* style */
+  border-radius: var(--bd-radius-24, 24px);
+  border: var(--bd-radius-32, 32px) solid var(--green-sf-green, #2c8338);
+  opacity: var(--sds-size-stroke-border);
+  background: var(--orange-primary-orange, #fbb03b);
+}
+.about-slidable-section-ValueCardSlide1-ValueContent {
+  /* layout */
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+.about-slidable-section-ValueCardSlide1-ValueContent p {
+  /* layout */
+  width: 329px;
+  /* Typography */
+  color: var(--orange-on-orange, #80530e);
+
+  /* Headline/headline-large */
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+.about-slidable-section-ValueCardSlide2 {
+  /* layout */
+  display: flex;
+  height: 540px;
+  padding: 171px 0px 171px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* style */
+  border-radius: var(--bd-radius-24, 24px);
+  border: var(--bd-radius-32, 32px) solid var(--green-sf-green, #2c8338);
+  opacity: var(--sds-size-stroke-border);
+  background: var(--primary-white, #fefefe);
+}
+.about-slidable-section-ValueCardSlide2-ValueContent {
+  /* layout */
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+.about-slidable-section-ValueCardSlide2-ValueContent p {
+  /* layout */
+  width: 329px;
+  /* Typography */
+  color: var(--black-primary-black, #1d1d1d);
+
+  /* Headline/headline-large */
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+
+.about-slidable-section-ValueCardSlide3 {
+  /* layout */
+  display: flex;
+  height: 540px;
+  padding: 171px 0px 171px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* style */
+  border-radius: var(--bd-radius-24, 24px);
+  border: var(--bd-radius-32, 32px) solid var(--green-sf-green, #2C8338);
+  opacity: var(--sds-size-stroke-border);
+  background: var(--black-primary-black, #1D1D1D);
+}
+.about-slidable-section-ValueCardSlide3-ValueContent {
+  /* layout */
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+.about-slidable-section-ValueCardSlide3-ValueContent p {
+  /* layout */
+  width: 329px;
+  /* Typography */
+  color: var(--black-strokecolor-black, #3D3D3D);
+
+/* Headline/headline-large */
+font-family: Inter;
+font-size: 48px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+
+.about-slidable-section-ValueCardSlide4 {
+  /* layout */
+  display: flex;
+  height: 540px;
+  padding: 171px 0px 171px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* style */
+  border-radius: var(--bd-radius-24, 24px);
+border: var(--bd-radius-32, 32px) solid var(--green-sf-green, #2C8338);
+opacity: var(--sds-size-stroke-border);
+background: var(--orange-primary-orange, #FBB03B);
+}
+.about-slidable-section-ValueCardSlide4-ValueContent {
+  /* layout */
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+.about-slidable-section-ValueCardSlide4-ValueContent p {
+  /* layout */
+  width: 329px;
+  /* Typography */
+  color: var(--orange-on-orange, #80530E);
+
+  /* Headline/headline-large */
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+
+.about-slidable-section-ValueCardSlide5 {
+  /* layout */
+  display: flex;
+  height: 540px;
+  padding: 171px 0px 171px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* style */
+  border-radius: var(--bd-radius-24, 24px);
+border: var(--bd-radius-32, 32px) solid var(--green-sf-green, #2C8338);
+opacity: var(--sds-size-stroke-border);
+background: var(--orange-orange-light, #F5C477);
+}
+.about-slidable-section-ValueCardSlide5-ValueContent {
+  /* layout */
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}
+.about-slidable-section-ValueCardSlide5-ValueContent p {
+  /* layout */
+  width: 329px;
+  /* Typography */
+  color: var(--black-strokecolor-black, #3D3D3D);
+
+  /* Headline/headline-large */
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  /* style */
+  opacity: var(--sds-size-stroke-border);
+}

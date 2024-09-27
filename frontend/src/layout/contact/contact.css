@@ -45,3 +45,101 @@
     color: inherit;
     border: transparent;
 }
+=======
+.contact-form-section h1 {
+  font-size: 76px;
+}
+
+.contact-form-section h1 {
+  color: var(--white-primary-white, var(--primary-white, #fefefe));
+  width: 100%;
+  padding-bottom: 18px;
+  border-bottom: 1.5px solid var(--strokecolor-white);
+}
+
+.contact-form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 82px;
+  align-self: stretch;
+  background: var(--black-primary-black, #1d1d1d);
+}
+
+.contact-form-container {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.contact-form-container p {
+  font-size: 18px;
+  color: var(--primary-white);
+  max-width: 368px;
+}
+
+.contact-form-container form {
+  align-self: flex-end;
+  max-width: 572px;
+  width: 570px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  border-radius: var(--bd-radius-32, 32px);
+  border: var(--sds-size-stroke-border) solid
+    var(--black-strokecolor-black, #3d3d3d);
+
+  background: var(--black-on-black, #232323);
+  box-shadow: 0px 2px 4px 0px rgba(25, 25, 25, 0.16);
+
+  padding: 48px 24px;
+  margin-left: auto;
+}
+
+.contact-form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form-input > * {
+  color: var(--primary-white);
+  font-size: 18px;
+}
+
+.contact-form-input input,
+.contact-form-input textarea {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: var(--bd-radius-32, 32px);
+  border: var(--stroke-sm, 0.5px) solid var(--black-strokecolor-black, #3d3d3d);
+  background: var(--black-strokecolor-black, #3d3d3d);
+}
+
+@media (max-width: 900px) {
+  .contact-form-container p {
+    max-width: unset;
+  }
+  .contact-form-container form {
+    margin-left: 0px;
+    max-width: unset;
+    width: unset;
+  }
+  .contact-form-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-form-section h1 {
+    font-size: 56px;
+  }
+}
