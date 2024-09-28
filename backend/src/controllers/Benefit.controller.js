@@ -44,7 +44,7 @@ const benefitController = {
             if (!deletedBenefit) {
                 return res.status(httpStatus.NOT_FOUND).json({ message: "Benefit not found" });
             }
-            res.status(httpStatus.NO_CONTENT).end(); 
+            res.status(httpStatus.OK).end(); 
         } catch (error) {
             console.error(error);
             res.status(httpStatus.INTERNAL_SERVER_ERROR).json({ message: "There was an error in the server" });

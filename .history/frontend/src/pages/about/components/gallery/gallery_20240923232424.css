@@ -1,0 +1,13 @@
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 12px;
+    padding:56px;
+}
+.galleryimg{
+    border-radius:var(--border-radius-24);
+    filter:saturate(0);
+}
+.galleryimg img{
+    border-radius:var(--border-radius-16);
+}
