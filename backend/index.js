@@ -1,8 +1,7 @@
 import app from './main.js';
-import { connection } from './src/config/database.mjs';
+import connection from './src/config/database.mjs';
 
-
+await connection();
 app.listen(process.env.PORT, () => {
-  connection();
   console.log(`app listening on port ${process.env.PORT}`)
 })
