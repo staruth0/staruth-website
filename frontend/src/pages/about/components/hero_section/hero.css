@@ -1,6 +1,6 @@
 .about-hero-section {
   display: flex;
-  padding: 135px 80px var(--pg-pb, 88px) 80px;
+  padding: 135px 80px;
   flex-direction: column;
   align-items: flex-start;
   gap: 112px;
@@ -84,7 +84,7 @@
 @media (max-width: 1000px) {
   .about-hero-section {
     display: flex;
-    padding: 135px 20px 20px;
+    padding: 135px 20px;
   }
   /* .about-hero-section-contentOne{
 

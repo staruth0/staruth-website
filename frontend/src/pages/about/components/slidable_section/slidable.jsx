@@ -4,25 +4,25 @@ import "./slidable.css";
 
 const HomeSlidableSection = () => {
   return(
-  <div className="home-slidable-section">
+  <div className="about-slidable-section">
 
-<div className="home-slidable-section-content-heading">
+<div className="about-slidable-section-content-heading">
           <h1>Values that fuel our drive</h1>
         </div>
 
       <ul id='list'>
-        <li><div className='home-slidable-section-value'>passion for solutions </div></li>
+        <li><div className='about-slidable-section-value'>passion for <br /> solutions </div></li>
        <li>
-        <div className="home-slidable-section-value">minimalist design</div>
+        <div className="about-slidable-section-value">minimalist <br />design</div>
        </li>
        <li>
-        <div className="home-slidable-section-value">growth oriented</div>
+        <div className="about-slidable-section-value">growth <br />oriented</div>
        </li>
        <li>
-        <div className="home-slidable-section-value">ruthless excellence</div>
+        <div className="about-slidable-section-value">ruthless <br />excellence</div>
        </li>
        <li>
-        <div className="home-slidable-section-value">attention to detail</div>
+        <div className="about-slidable-section-value">attention <br />to detail</div>
        </li>
       </ul>
     
