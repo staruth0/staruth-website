@@ -9,6 +9,7 @@
     flex-direction: column;
     gap:112px;
     padding:56px 80px;
+    width:100vw;
 }
 .home-slidable-section-content-heading{
     display: flex;
@@ -26,7 +27,7 @@
     font-size: 76px;
     font-style: normal;
     font-weight: 700;
-    line-height: 80px;
+    line-height: 90%;
     letter-spacing: -1.52px;
     margin: 0;
     width:40%;
@@ -88,3 +89,12 @@
     color:var(--strokecolor-black);
 }
 
+@media (max-width: 1000px) {
+    .home-slidable-section{
+      padding: 80px 20px;
+    }
+    .home-slidable-section h1 {
+      font-size: 56px;
+      width:90%
+    }
+}
