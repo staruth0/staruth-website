@@ -1,6 +1,6 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "../pages/portfolio/portfolio.css";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import '../pages/portfolio/portfolio.css';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import 'swiper/css/navigation';
@@ -10,7 +10,6 @@ import 'swiper/css/scrollbar';
 export default function Card(props) {
   return (
     <section className="portfolio-card">
-      
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={50}
@@ -50,14 +49,14 @@ export default function Card(props) {
             <img src={props.imageURL} alt="Apple Watch" />
           </div>
         </SwiperSlide>
-
       </Swiper>
 
       <section className="card-bottom">
         <div className="card-bottom-text">
           <h2>Apple Niche Store</h2>
           <span>
-            A fully functional e-commerce platform developed for the sale of custom electronic devices.
+            A fully functional e-commerce platform developed for the sale of
+            custom electronic devices.
           </span>
           <span>How we helped: </span>
           <div>

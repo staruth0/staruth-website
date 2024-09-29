@@ -33,8 +33,8 @@ const HomeWhatWeCareAbout = () => {
       </h1>
       <p>For your projects, we at Staruth care about</p>
       <div className="home-what-we-care-about-items">
-        {items.map((item) => (
-          <WhatWeCareAboutCard item={item} key={item.id} />
+        {items.map((item, index) => (
+          <WhatWeCareAboutCard item={item} key={item.id} index={index} />
         ))}
       </div>
     </div>
