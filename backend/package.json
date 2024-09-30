@@ -4,12 +4,12 @@
   "type": "module",
   "description": "Create a Node.js app for building production-ready RESTful APIs using Express, by running one command",
   "bin": "bin/createNodejsApp.js",
-  "main": "src/index.mjs",
+  "main": "index.js",
   "repository": "https://github.com/hagopj13/node-express-boilerplate.git",
-  "author": "Hagop Jamkojian <hagopj13@gmail.com>",
+  "author": "Fabrice and kenneth kouete",
   "license": "MIT",
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=20.x"
   },
   "scripts": {
     "start": "pm2 start ecosystem.config.json --no-daemon",
@@ -60,7 +60,7 @@
     "connect-mongodb-session": "^5.0.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.18.2",
+    "express": "^4.21.0",
     "express-mongo-sanitize": "^2.2.0",
     "express-rate-limit": "^5.5.1",
     "express-session": "^1.18.0",
@@ -69,7 +69,7 @@
     "joi": "^17.12.1",
     "jsonwebtoken": "^9.0.2",
     "moment": "^2.30.1",
-    "mongoose": "^5.13.22",
+    "mongoose": "^8.6.4",
     "morgan": "^1.10.0",
     "nodemailer": "^6.9.9",
     "passport": "^0.7.0",

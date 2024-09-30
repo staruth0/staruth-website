@@ -39,3 +39,28 @@ p, li{
     font-size: 18px;
 }
 
+
+
+  /*  media queries to make the component responsive */
+  
+  @media (max-width: 768px) {
+    .team-on-click-skills-container {
+      max-width: 600px; /* adjust the max-width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .team-on-click-skills-container {
+      max-width: 400px; /* adjust the max-width for smaller screens */
+    }
+    .team-on-click-skills-container-tools h1,
+    .team-on-click-skills-container-Qualifications h1,
+    .team-on-click-skills-container-Achievements h1 {
+      font-size: 20px; /* adjust the font size for smaller screens */
+    }
+    .team-on-click-skills-container-tools p,
+    .team-on-click-skills-container-Qualifications ul,
+    .team-on-click-skills-container-Achievements p {
+      font-size: 14px; /* adjust the font size for smaller screens */
+    }
+  }

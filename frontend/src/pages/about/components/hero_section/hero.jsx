@@ -6,9 +6,9 @@ const AboutHeroComponent = () => {
     <div className="about-hero-section">
       <div className="about-hero-section-contentOne">
         <h1>
-          At Staruth, we join forces with start-ups, <br /> brands, businesses
-          and founders to build <br /> tech products and systems that help them{" "}
-          <br /> break out in the digital space
+          At Staruth, we join forces with start-ups, brands, businesses
+          and founders to build tech products and systems that help them
+          break out in the digital space
         </h1>
       </div>
       <div className="about-hero-section-contentTwo">
