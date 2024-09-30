@@ -99,7 +99,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
   .home-hero-section-container-btn-grp {
     flex-direction: column;
   }

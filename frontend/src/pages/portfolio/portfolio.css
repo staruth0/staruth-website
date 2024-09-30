@@ -1,5 +1,3 @@
-
-
 /* Card styling */
 .portfolio-card {
   margin-bottom: 10%;
@@ -45,36 +43,32 @@
   cursor: pointer;
 }
 
-
-.swiper-pagination span{ 
-    background-color: #26CE3D;
-    width: 15px;
-    height: 15px;
+.swiper-pagination span {
+  background-color: #26ce3d;
+  width: 15px;
+  height: 15px;
 }
 
-
-
-.swiper-navigations{
-    position: absolute;
-    bottom: 1%;
-    left: 50%;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-
+.swiper-navigations {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.swiper-navigations span{
-    width: 15px;
-    height: 15px;
-    border: 1px solid #26CE3D;
-    border-radius: 50%;
-    cursor: pointer;
+.swiper-navigations span {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #26ce3d;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.swiper-navigations span.active{
-    background-color: #26CE3D;
+.swiper-navigations span.active {
+  background-color: #26ce3d;
 }
 
 /* Card bottom styling */
@@ -104,7 +98,7 @@
 
 .see-more-btn {
   padding: 10px 20px;
-  background-color: #26CE3D;
+  background-color: #26ce3d;
   height: fit-content;
   color: #000;
   border-radius: 25px;

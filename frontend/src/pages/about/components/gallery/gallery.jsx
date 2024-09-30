@@ -3,7 +3,7 @@ import "./gallery.css";
 import teamguy from "../../../../assets/images/teamguy.jpeg";
 const GalleryComponent = () => {
   return (
-    <div className="container">
+    <div className="gallery-container">
       <div className="galleryimg">
         <img src={teamguy} alt="gallery img" />
       </div>

@@ -1,6 +1,6 @@
 .about-hero-section {
   display: flex;
-  padding: 135px 80px var(--pg-pb, 88px) 80px;
+  padding: 135px 80px;
   flex-direction: column;
   align-items: flex-start;
   gap: 112px;
@@ -23,6 +23,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  width:80%;
 }
 .about-hero-section-contentTwo {
   display: flex;
@@ -79,4 +80,21 @@
   font-weight: 600;
   line-height: normal;
   margin: 0;
+}
+@media (max-width: 1000px) {
+  .about-hero-section {
+    display: flex;
+    padding: 135px 20px;
+  }
+  /* .about-hero-section-contentOne{
+
+  } */
+  .about-hero-section h1{
+    font-size: 30px;
+    width:90%;
+  }
+  .about-hero-section-contentTwo > div {
+    width:70%;
+
+  }
 }

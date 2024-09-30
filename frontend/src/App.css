@@ -58,7 +58,7 @@ html {
 .container {
   padding: 56px 5%;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1560px;
 }
 
 .main-body {
@@ -72,4 +72,7 @@ button {
 
 ul {
   padding: 0;
+}
+textarea {
+  resize: none;
 }

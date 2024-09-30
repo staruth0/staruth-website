@@ -10,7 +10,7 @@ import HomePage from './pages/home';
 import AboutPage from './pages/about';
 import ServicesPage from './pages/services';
 import ContactPage from './pages/contact_us/contact';
-import TeamPage from './pages/teamOnClick';
+import TeamPage from './pages/teamOnClick/index';
 import PortfolioPage from './pages/portfolio';
 
 //Stylesheet

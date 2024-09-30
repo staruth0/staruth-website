@@ -1,15 +1,21 @@
-.home-slidable-section {
+.container.home-slidable-section {
   background: var(--on-black, #232323);
+  padding-inline: 0px;
+  overflow: hidden;
 }
 
 .home-slidable-section > h1 {
   color: var(--orange-orange-light, #f5c477);
+  width: 100%;
+  margin: 0;
 }
 
 .home-slidable-section-slider {
   display: flex;
-  overflow-x: scroll;
   gap: 18px;
+  animation: slide 60s linear infinite;
+
+  padding: 1rem !important;
 }
 
 .home-slidable-section-slides {
@@ -29,7 +35,6 @@
   height: 100%;
   padding: 18px;
   border-radius: 32px;
-  background-color: red;
   background-image: url(https://us.123rf.com/450wm/mklrnt/mklrnt2001/mklrnt200113974/138250650-young-handsome-african-businessman-against-gray-background.jpg?ver=6);
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,4 +45,23 @@
   border-radius: var(--bd-radius-32, 32px);
 
   background: var(--primary-white, #fefefe);
+}
+
+/* animation for infinite scrolling */
+/* @keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
+@keyframes slide {
+  0% {
+    transform: translateX(60%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

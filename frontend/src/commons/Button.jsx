@@ -17,7 +17,7 @@ const ButtonOutlinedWhite = ({ title }) => {
   return (
     <button className="underline-link body-lg-heavy">
       <span>{title}</span>
-      <span className="material-symbols-outlined">arrow_right_alt</span>
+      <span className="material-symbols-outlined">arrow_right</span>
     </button>
   );
 };
