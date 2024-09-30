@@ -103,6 +103,12 @@
     .team-onclick-hero-section-left > header {
       gap: 10px;
     }
+    .team-onclick-hero-section-left > header h1 {
+      font-size: 60px;
+    }
+    .team-onclick-hero-section-left > header h3 {
+      font-size: 45px;
+    }
     .team-onclick-hero-section-left > p {
       font-size: 16px;
     }
@@ -111,7 +117,7 @@
   /* For screens with a maximum width of 768px */
   @media (max-width: 768px) {
     .team-onclick-hero-section {
-      padding: 10px;
+      padding: 25px;
       gap: 20px;
     }
     .team-onclick-hero-section-right img {
@@ -121,6 +127,12 @@
     .team-onclick-hero-section-left > header {
       gap: 5px;
     }
+    .team-onclick-hero-section-left > header h1 {
+      font-size: 55px;
+    }
+    .team-onclick-hero-section-left > header h3 {
+      font-size: 35px;
+    }
     .team-onclick-hero-section-left > p {
       font-size: 14px;
     }
@@ -129,7 +141,7 @@
   /* For screens with a maximum width of 480px */
   @media (max-width: 480px) {
     .team-onclick-hero-section {
-      padding: 5px;
+      padding: 15px;
       gap: 10px;
     }
     .team-onclick-hero-section-right img {
@@ -138,6 +150,12 @@
     }
     .team-onclick-hero-section-left > header {
       gap: 2px;
+    }
+    .team-onclick-hero-section-left > header h1 {
+      font-size: 40px;
+    }
+    .team-onclick-hero-section-left > header h3 {
+      font-size: 20px;
     }
     .team-onclick-hero-section-left > p {
       font-size: 12px;
