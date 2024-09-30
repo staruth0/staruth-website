@@ -6,20 +6,20 @@ const AboutHeroComponent = () => {
     <div className="about-hero-section">
       <div className="about-hero-section-contentOne">
         <h1>
-          At Staruth, we join forces with start-ups, brands, businesses
-          and founders to build tech products and systems that help them
-          break out in the digital space
+          At Staruth, we join forces with start-ups, brands, businesses and
+          founders to build tech products and systems that help them break out
+          in the digital space
         </h1>
       </div>
       <div className="about-hero-section-contentTwo">
         <div>
-        <h1>Our Vision</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Quis orci ses neque rhoncus.
-          Integer commodo Lorem ipsum dolor sit amet consepsum dolor sit amet
-          consectetur. Quis orci sed fesi egestas neque rhoncus. Integer commodo
-          Lorem ipsum dolor sit amet consectetur.
-        </p>
+          <h1>Our Vision</h1>
+          <p>
+            To create a future where empowered youths harness the power of
+            technology to revolutionize farming, ensuring food security,
+            economic growth, and sustainable practices, while actively combating
+            the challenges posed by climate change
+          </p>
         </div>
       </div>
       <div className="about-hero-section-contentThree">
