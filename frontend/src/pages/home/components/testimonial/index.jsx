@@ -44,17 +44,6 @@ const HomeTestimonial = () => {
       </div>
       <div className="home-testimonial-btn-review-text">
         <p>Client Reviews</p>
-
-        <div className="home-testimonial-btn-container">
-          <button>
-            <span>{'<'}</span>
-            <p>Previous</p>
-          </button>
-          <button>
-            <p>Next</p>
-            <span>{'>'}</span>
-          </button>
-        </div>
       </div>
       <div className="home-testimonial-items">
         {testimonials.map((testimonial) => (
