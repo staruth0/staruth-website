@@ -28,6 +28,18 @@ const AboutHeroComponent = () => {
           we can help you
         </h1>
       </div>
+      <div className="about-hero-section-contentTwo">
+        <div>
+          <h1>Our Mission</h1>
+          <p>
+            Our mission is to equip young people with cutting-edge technological
+            tools and skills to transform the agricultural sector, promote
+            sustainable farming practices, and mitigate the effects of climate
+            change, all while fostering innovation and inclusivity in rural
+            communities across Africa through technology
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
