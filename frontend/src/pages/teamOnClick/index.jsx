@@ -40,10 +40,11 @@ const TeamPage = () => {
     const fetchMemberData = async () => {
       try {
         // Replace with your backend API endpoint
-        const response = await axios.get(`/api/members/${id}`);
+        const response = await axios.get(`https://staruthwebsite-api.vercel.app/teams/getTeamMember/${id}`);
         setMember(response.data); // Store the fetched member data
       } catch (err) {
         setError('Failed to fetch member data');
+        console.error("Error fetching team member data:", err); // Log the error for debugging
       } finally {
         setLoading(false); // Set loading to false after the request is complete
       }
@@ -52,6 +53,7 @@ const TeamPage = () => {
     // Call the fetch function
     fetchMemberData();
   }, [id]);  // Re-run the effect when the ID changes
+  console.log(member)
 
   // If the data is still loading, show a loading message
   if (loading) {
