@@ -1,0 +1,14 @@
+.root-layout-main {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto; /* Center the container */
+    overflow: hidden;
+    background-color: aqua;
+}
+
+@media screen and (min-width: 2000px) {
+    .root-layout-main {
+        display: flex;
+        justify-content: center;
+    }
+}

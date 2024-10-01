@@ -1,32 +1,33 @@
 .about-meet-team-section-content {
-  width:100%;
+  width: 100%;
   display: flex;
-  padding: var(--pg-pt, 56px) 80px var(--pg-pb, 88px) 80px;
+  padding: var(--pg-pt, 56px) 80px var(--pg-pb, 88px) 90px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  opacity: var(--sds-size-stroke-border);
   background: var(--primary-white, #fefefe);
-  gap: 80px;
+  gap: 70px;
   margin-bottom: 2px;
 }
+
 .about-meet-team-section-content-heading {
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: flex-end;
   gap: 18px;
-  border-bottom:1px solid var(--primary-black);
-  opacity: var(--sds-size-stroke-border);
+  border-bottom: 1px solid var(--primary-black);
 }
+
 .about-meet-team-section-content-heading h1 {
   color: var(--black-primary-black, #1d1d1d);
   text-align: right;
-  font-family: Inter;
-  font-size: 76px;
-  font-style: normal;
+  font-family: Inter, sans-serif;
+  font-size: clamp(40px, 6vw, 76px);
+  /* Fluid typography for responsiveness */
   font-weight: 700;
-  line-height: 90%;
+  line-height: 1;
+  /* Improved line-height for readability */
   letter-spacing: -1.52px;
   margin: 0;
 }
@@ -34,43 +35,63 @@
 .about-meet-team-section-content-description {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 10px;
-  align-self: stretch;
-
-  opacity: var(--sds-size-stroke-border);
+  width: 100%;
 }
+
 .about-meet-team-section-content-description p {
-  width: 40%;
-
+  width: 50%;
+  text-align: justify;
   color: var(--black-primary-black, #1d1d1d);
-
-  /* body/body lg (desktop)/body lg bold */
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
+  font-family: Inter, sans-serif;
+  font-size: clamp(16px, 2.5vw, 18px);
+  /* Fluid typography */
   font-weight: 600;
-  line-height: normal;
-
-  opacity: var(--sds-size-stroke-border);
+  line-height: 1.6;
+  /* Increase line-height for better readability on small screens */
 }
+
 .about-meet-team-section-content-membersInfo {
   display: flex;
-  align-items:center;
-  justify-content:flex-start;
-  flex-wrap:wrap;
-  gap: var(--pg-pt, 56px) 16px;
-  align-self: stretch;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 56px 16px;
   flex-wrap: wrap;
-  opacity: var(--sds-size-stroke-border);
+  width: 100%;
 }
+
 @media (max-width: 1000px) {
-  .about-meet-team-section-content{
+  .about-meet-team-section-content {
     padding: var(--pg-pt, 56px) 20px;
   }
-  .about-meet-team-section h1 {
-    font-size: 56px;
+
+  .about-meet-team-section-content-heading h1 {
+    font-size: clamp(36px, 5vw, 56px);
+    /* Smaller heading on smaller screens */
+    text-align: center;
+    /* Center heading on smaller screens */
   }
+
   .about-meet-team-section-content-description p {
-    width:80%;
+    width: 80%;
+    /* Allow text to take more space */
+    text-align: center;
+    /* Center the text on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .about-meet-team-section-content-description p {
+    width: 100%;
+    font-size: clamp(14px, 3.5vw, 16px);
+    /* Even smaller text size on very small screens */
+    text-align: justify;
+    /* Revert to justified for smaller mobile devices */
+  }
+
+  .about-meet-team-section-content-heading h1 {
+    font-size: clamp(30px, 6vw, 50px);
+    /* Adjust heading size for small screens */
   }
 }

@@ -14,6 +14,7 @@ const TeamPage = () => {
   useEffect(() => {
     const fetchMemberData = async () => {
       try {
+        setLoading(true)
         const response = await axios.get(`https://staruthwebsite-api.vercel.app/teams/getTeamMember/${id}`);
         setMember(response.data);
       } catch (err) {
@@ -28,15 +29,30 @@ const TeamPage = () => {
   }, [id]);
 
   if (loading) {
-    return <div>Loading member details...</div>;
+    return (
+      <div className='about-page'>
+        <div className='team_onclick_loding'>Loading member details...</div>
+      </div>
+    
+    );
   }
 
   if (error) {
-    return <div>{error}</div>;
+   return (
+      <div className='about-page'>
+        <div className='team_onclick_loding'>A error occur while Loading member details...</div>
+      </div>
+    
+    );
   }
 
   if (!member) {
-    return <div>Member not found</div>;
+    return (
+      <div className='about-page'>
+        <div className='team_onclick_loding'>Loading member failed...</div>
+      </div>
+    
+    );
   }
 
   return (
