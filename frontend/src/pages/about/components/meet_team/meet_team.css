@@ -69,16 +69,11 @@
   .about-meet-team-section-content-heading h1 {
     font-size: clamp(36px, 5vw, 56px);
     /* Smaller heading on smaller screens */
-    text-align: center;
-    /* Center heading on smaller screens */
   }
 
   .about-meet-team-section-content-description p {
     width: 80%;
     /* Allow text to take more space */
-    text-align: center;
-    /* Center the text on smaller screens */
-  }
 }
 
 @media (max-width: 600px) {
