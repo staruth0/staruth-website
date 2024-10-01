@@ -9,7 +9,7 @@ const Aboutgallery = () => {
     useEffect(() => {
         const fetchImages = async () => {
             try {
-                const response = await fetch('http://localhost:5500/aboutGallery/getAll'); // Update with your backend URL
+                const response = await fetch('https://staruthwebsite-api.vercel.app/aboutGallery/getAll'); // Update with your backend URL
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
