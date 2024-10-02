@@ -1,5 +1,5 @@
 import logo from '../../assets/icons/logoPNG 1.svg';
-import facebook from '../../assets/icons/facebook.svg';
+import facebook from '../../assets/icons/Facebook.svg';
 import linkedIn from '../../assets/icons/linkedin.svg';
 import github from '../../assets/icons/github.svg';
 import twitter from '../../assets/icons/prime_twitter.svg';
