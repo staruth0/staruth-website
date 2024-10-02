@@ -1,39 +1,95 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import linkedin from "../../../../../assets/icons/linkedin.svg";
-import github from "../../../../../assets/icons/github.svg";
-import aboutMeetTeamSectionImage1 from "../../../../../assets/images/teamguy.jpeg";
+import linkedinIcon from "../../../../../assets/icons/linkedin.svg";
+import githubIcon from "../../../../../assets/icons/github.svg";
+import twitterX from "../../../../../assets/images/twitter-x.svg"
+import defaultProfileImage from "../../../../../assets/images/defaultProfileImage.svg"; // Fallback image
 import "./pf_card.css";
-// function Card({ data }) {
-//   return (
-//     <div className="pf_card">
-//       <h2>{data.pf_name}</h2>
-//       <p>{data.pf_role}</p>
-//       <img src={data.pf_image} alt={data.pf_name} />
-//     </div>
-//   );
-// }
+
 const ProfileCard = () => {
-  return (
-    <div className="about-meet-team-section-content-membersProfile">
-      <Link to={"/about/team"}>
-        <img
-          src={aboutMeetTeamSectionImage1}
-          className="about-meet-team-section-content-membersPhotoOne"
-          alt="Nfor Glenn"
-        />
-      </Link>
-      <div className="about-meet-team-section-content-membersProfileBox">
-        <div className="about-meet-team-section-content-membersRole">
-          <h4>Nfor Glenn</h4>
-          <p>Frontend Developer</p>
-        </div>
-        <div className="about-meet-team-section-content-membersSocials">
-          <img src={linkedin} alt="" />
-          <img src={github} alt="" />
-        </div>
-      </div>
-    </div>
-  );
+	const [teamMembers, setTeamMembers] = useState([]);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState(null);
+
+	// Fetch team members data from the API
+	useEffect(() => {
+		const fetchTeamMembers = async () => {
+			try {
+				const response = await fetch(
+					"https://staruthwebsite-api.vercel.app/teams/getTeamMembers"
+				);
+				if (!response.ok) {
+					throw new Error("Failed to fetch team members");
+				}
+				const data = await response.json();
+				setTeamMembers(data);
+			} catch (err) {
+				setError(err.message);
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fetchTeamMembers();
+	}, []);
+
+	if (loading) {
+		return <p>Loading team members...</p>;
+	}
+
+	if (error) {
+		return <p>Error: {error}</p>;
+	}
+
+	if (teamMembers.length === 0) {
+		return <p>No team members found.</p>;
+	}
+
+	return (
+		<div className="team-members-grid">
+			{teamMembers.map((member) => (
+				<div key={member._id} className="pf_card">
+					<Link to={`/about/team/${member._id}`}>
+						<img
+							src={member.image || defaultProfileImage}
+							className="pf_card_image"
+							alt={member.name}
+							onError={(e) =>
+								(e.target.src = defaultProfileImage)
+							} // Fallback image if there's an error loading
+						/>
+					</Link>
+					<div className="pf_card_member_details">
+						<div className="pf_card_info">
+							<span>{member.name}</span><br />
+							<p>{member.role}</p>
+						</div>
+						<div className="pf_card_socials">
+							{member.socialMediaLinks?.map((social) => {
+								let icon;
+								if (social.appName === "LinkedIn") {
+									icon = linkedinIcon;
+								} else if (social.appName === "GitHub") {
+									icon = githubIcon;
+                }else {
+                  icon = twitterX;
+                }
+								return (
+									<a
+										key={social._id}
+										href={social.link}
+										target="_blank"
+										rel="noopener noreferrer">
+										<img src={icon} alt={social.appName} />
+									</a>
+								);
+							})}
+						</div>
+					</div>
+				</div>
+			))}
+		</div>
+	);
 };
+
 export default ProfileCard;

@@ -98,3 +98,32 @@
 
   }
 }
+
+@media (max-width: 600px) {
+  .about-hero-section {
+    padding: 80px 16px;
+    /* Reduce padding further for smaller screens */
+    gap: 40px;
+    /* Adjust gap for very small screens */
+  }
+
+  .about-hero-section h1 {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .about-hero-section-contentTwo>div {
+    width: 100%;
+    /* Full width for small screens */
+  }
+
+  .about-hero-section-contentTwo h1 {
+    font-size: 22px;
+    /* Further reduce for smaller screens */
+  }
+
+  .about-hero-section-contentTwo p {
+    font-size: 14px;
+    /* Reduce text size for smaller screens */
+  }
+}

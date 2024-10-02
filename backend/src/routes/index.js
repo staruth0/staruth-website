@@ -6,6 +6,7 @@ import { projectRouter } from './Project.route.js';
 import { serviceRouter } from './Service.route.js';
 import { teamRouter } from './Team.route.js';
 import { testimonialRouter } from './Testimonial.route.js';
+import aboutGalleryRouter from './aboutGallery.route.js'
 
 export {
   benefitRouter,
@@ -15,5 +16,6 @@ export {
   projectRouter,
   serviceRouter,
   teamRouter,
-  testimonialRouter
+  testimonialRouter,
+  aboutGalleryRouter
 };
