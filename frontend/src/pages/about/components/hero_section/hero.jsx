@@ -1,5 +1,5 @@
-import React from "react";
-import "./hero.css";
+import React from 'react';
+import './hero.css';
 
 const AboutHeroComponent = () => {
   return (
@@ -43,5 +43,4 @@ const AboutHeroComponent = () => {
     </div>
   );
 };
-
 export default AboutHeroComponent;

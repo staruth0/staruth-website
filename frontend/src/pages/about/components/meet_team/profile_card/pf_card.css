@@ -1,31 +1,26 @@
 .team-members-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  justify-content: space-between;
-  /* Ensures spacing between flex items */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  width: 100%;
 }
 
 .pf_card {
-  flex: 1 1 300px;
-  /* The card takes at least 300px and grows to fill available space */
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
   background: #fff;
-  padding: 10px;
-  box-sizing: border-box;
-  /* Ensures padding doesn't affect width */
-  max-width: calc(33.33% - 20px);
-  /* Maximum width per card */
 }
 
 .pf_card_image {
   width: 100%;
-  height: 18em;
-  object-fit: contain;
-  border-bottom: 1px solid #ddd;
+  height: 450px;
+  min-height: 300px;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  filter: grayscale(0.9);
+  opacity: 0.4;
+}
+.pf_card_image:hover {
+  opacity: 1;
 }
 
 .pf_card_member_details {
@@ -39,13 +34,13 @@
   max-width: 50%;
 }
 
-.pf_card_info>span:first-of-type {
+.pf_card_info > span:first-of-type {
   font-size: 1rem;
   line-height: 1em;
   text-decoration: none;
 }
 
-.pf_card_info>p {
+.pf_card_info > p {
   font-size: 0.7rem;
   line-height: 1em;
 }
@@ -60,25 +55,24 @@
   margin-right: 8px;
 }
 
-/* RESPONSIVE ADJUSTMENTS */
-
-/* For screens smaller than 900px */
-@media (max-width: 900px) {
-  .pf_card {
-    max-width: calc(50% - 20px);
-    /* Two cards per row */
+@media (max-width: 620px) {
+  .pf_card_image {
+    height: auto;
+    max-height: unset;
+    object-fit: fill;
   }
 }
 
-/* For screens smaller than 600px */
-@media (max-width: 600px) {
-  .pf_card {
-    max-width: 100%;
-    /* Stack cards in one column */
-  }
-
+@media (max-width: 670px) {
   .pf_card_image {
-    height: 12em;
-    /* Smaller images for small screens */
+    height: auto;
+    max-height: unset;
+  }
+}
+
+@media (max-width: 700px) {
+  .pf_card_image {
+    filter: grayscale(0.9);
+    opacity: 1;
   }
 }

@@ -23,21 +23,21 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  width:80%;
+  width: 80%;
 }
 .about-hero-section-contentTwo {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   gap: 10px;
-  width:100%;
+  width: 100%;
   align-self: stretch;
 }
 
 .about-hero-section-contentTwo > div {
   display: flex;
-  width:40%;
+  width: 40%;
   flex-direction: column;
   align-items: flex-end;
   gap: 0px;
@@ -89,13 +89,12 @@
   /* .about-hero-section-contentOne{
 
   } */
-  .about-hero-section h1{
+  .about-hero-section h1 {
     font-size: 30px;
-    width:90%;
+    width: 90%;
   }
   .about-hero-section-contentTwo > div {
-    width:70%;
-
+    width: 70%;
   }
 }
 
@@ -112,7 +111,7 @@
     width: 100%;
   }
 
-  .about-hero-section-contentTwo>div {
+  .about-hero-section-contentTwo > div {
     width: 100%;
     /* Full width for small screens */
   }
