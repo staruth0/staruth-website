@@ -11,9 +11,6 @@
   flex-direction: column;
   gap: 112px;
   padding: 56px 80px;
-  width: 100vw;
-  overflow: hidden;
-  /* Hides overflow for smooth horizontal scrolling */
 }
 
 .about-slidable-section-content-heading {

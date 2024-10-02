@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./slidable.css";
+import React, { useEffect, useRef, useState } from 'react';
+import './slidable.css';
 
 const HomeSlidableSection = () => {
   const listRef = useRef(null);
@@ -36,7 +36,8 @@ const HomeSlidableSection = () => {
 
   // Pause scrolling when left mouse button is held down
   const handleMouseDown = (e) => {
-    if (e.button === 0) { // Only handle left mouse button (0 is the left button)
+    if (e.button === 0) {
+      // Only handle left mouse button (0 is the left button)
       setIsScrolling(false); // Pause scrolling
     }
   };
@@ -61,19 +62,34 @@ const HomeSlidableSection = () => {
       >
         {/* Original list items */}
         <li>
-          <div className="about-slidable-section-value">Passion for <br />Solutions</div>
+          <div className="about-slidable-section-value">
+            Passion for <br />
+            Solutions
+          </div>
         </li>
         <li>
-          <div className="about-slidable-section-value">Minimalist <br />Design</div>
+          <div className="about-slidable-section-value">
+            Minimalist <br />
+            Design
+          </div>
         </li>
         <li>
-          <div className="about-slidable-section-value">Growth <br />Oriented</div>
+          <div className="about-slidable-section-value">
+            Growth <br />
+            Oriented
+          </div>
         </li>
         <li>
-          <div className="about-slidable-section-value">Ruthless <br />Excellence</div>
+          <div className="about-slidable-section-value">
+            Ruthless <br />
+            Excellence
+          </div>
         </li>
         <li>
-          <div className="about-slidable-section-value">Attention <br />to Detail</div>
+          <div className="about-slidable-section-value">
+            Attention <br />
+            to Detail
+          </div>
         </li>
       </ul>
     </div>
