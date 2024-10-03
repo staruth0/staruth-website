@@ -15,7 +15,9 @@
 .team-on-click-skills-container div{
     width: 30%;
 }
-
+.team-on-click-skills-container h3{
+  font-size: 30px;
+}
 
 .team-on-click-skills-container-Qualifications ul{
     display: flex;

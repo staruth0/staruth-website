@@ -43,7 +43,7 @@ const TeamOnClickHeroComponent = ({ member }) => {
           ))}
         </div>
 
-        <div>
+        <div className='team-onclick-hero-section-right-Interests'>
           <h4>Interests:</h4>
           <ul>
             {interests.map((interest, index) => (
