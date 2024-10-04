@@ -2,12 +2,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import '../pages/portfolio/portfolio.css';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-export default function Card({imageURL}) {
+export default function Card({ imageURL, portfolioId }) {
   return (
     <section className="portfolio-card">
       <Swiper
@@ -28,27 +29,8 @@ export default function Card({imageURL}) {
           </div>
         </SwiperSlide>
 
-        <SwiperSlide>
-          <div className="slide">
-            <div className="swiper-text">
-              <h1>Apple Watch</h1>
-              <p>SERIES 9</p>
-              <a href="#">Learn More</a>
-            </div>
-            <img src={imageURL} alt="Apple Watch" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="slide">
-            <div className="swiper-text">
-              <h1>Apple Watch</h1>
-              <p>SERIES 9</p>
-              <a href="#">Learn More</a>
-            </div>
-            <img src={imageURL} alt="Apple Watch" />
-          </div>
-        </SwiperSlide>
+        {/* More SwiperSlides here */}
+        
       </Swiper>
 
       <section className="card-bottom">
@@ -65,7 +47,8 @@ export default function Card({imageURL}) {
           </div>
         </div>
 
-        <a className="see-more-btn">See More</a>
+        {/* Link to dynamic portfolio page */}
+        <Link to={`/portfolio/${portfolioId}`} className="see-more-btn">See More</Link>
       </section>
     </section>
   );

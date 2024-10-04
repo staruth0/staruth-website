@@ -12,6 +12,7 @@ import ServicesPage from './pages/services';
 import ContactPage from './pages/contact_us/contact';
 import TeamPage from './pages/teamOnClick/index';
 import PortfolioPage from './pages/portfolio';
+import PortfolioDetailPage from './pages/portfolio/PortfolioDetailPage'; 
 
 //Stylesheet
 import './App.css';
@@ -22,11 +23,12 @@ function App() {
     createRoutesFromElements(
       <>
         <Route path="/" element={<RootLayout />}>
-          <Route te index element={<HomePage />} />
+          <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="about/team/:id" element={<TeamPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="portfolio" element={<PortfolioPage />} />
+          <Route path="portfolio/:id" element={<PortfolioDetailPage />} /> {/* Dynamic route */}
           <Route path="services" element={<ServicesPage />} />
         </Route>
       </>

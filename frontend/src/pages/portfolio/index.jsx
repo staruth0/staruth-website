@@ -2,12 +2,19 @@ import Card from '../../commons/Porfolio_card';
 import portfolioImage1 from '../../assets/images/applewatch.jpg';
 
 const PortfolioPage = () => {
+  // Example portfolios
+  const portfolios = [
+    { id: 1, imageURL: portfolioImage1 },
+    { id: 2, imageURL: portfolioImage1 },
+    { id: 3, imageURL: portfolioImage1 },
+    { id: 4, imageURL: portfolioImage1 },
+  ];
+
   return (
     <div className="container">
-      <Card imageURL={portfolioImage1} />
-      <Card imageURL={portfolioImage1} />
-      <Card imageURL={portfolioImage1} />
-      <Card imageURL={portfolioImage1} />
+      {portfolios.map(portfolio => (
+        <Card key={portfolio.id} imageURL={portfolio.imageURL} portfolioId={portfolio.id} />
+      ))}
     </div>
   );
 };
