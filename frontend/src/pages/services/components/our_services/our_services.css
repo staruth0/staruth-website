@@ -1,3 +1,4 @@
+
 .services-our-services-section {
   color: #fff;
   padding: 0px 80px;
@@ -41,20 +42,25 @@
 
 .services-our-services-section-main-images {
   display: flex;
-  overflow: hidden;
+  overflow-x: auto; 
+  scroll-behavior: smooth; 
   gap: 10px;
+  width: 100%; 
+  padding: 1rem .5rem 1.5rem .5rem;
 }
 
 .services-our-services-section-main-images img {
   align-self: stretch;
-  width: 516px;
+  width: 450px;
+  max-height: 350px;
   border-radius: 8px;
+  flex-shrink: 0; 
 }
 
 .services-our-services-section-main .navigations {
   float: right;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 56px;
   align-self: stretch;
   margin-top: 24px;
@@ -62,4 +68,48 @@
 
 .services-our-services-section-main .navigations img {
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.services-our-services-section-main .navigations img:hover {
+  opacity: 0.8; 
+}
+
+
+.services-our-services-section-main .navigations img[disabled] {
+  opacity: 0.5; 
+  cursor: not-allowed; 
+}
+
+
+@media (max-width: 768px) {
+  .services-our-services-section {
+    padding: 0 20px;
+  }
+
+  .services-our-services-section-header .service-icon {
+    width: 80px;
+    height: 100px;
+  }
+
+  .services-our-services-section-header h1 {
+    font-size: 28px;
+  }
+
+  .services-our-services-section-header p {
+    font-size: 16px;
+  }
+
+  .services-our-services-section-main-images img {
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .services-our-services-section-main .navigations img {
+    width: 30px;
+    height: 30px;
+  }
 }
