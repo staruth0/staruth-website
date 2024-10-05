@@ -31,7 +31,6 @@ const ProjectList = () => {
     setProjects(data);
     console.log(data)
   };
-
   return (
     <div className="project-list">
       {projects.map((project, index) => (
