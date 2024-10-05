@@ -19,10 +19,18 @@
 }
 .about-hero-section-contentOne h1 {
   color: #fff;
-  font-size: 48px;
+  font-size: 33px;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
+  line-height: 2.7rem;
+  width: 80%;
+}
+.about-hero-section-contentOne h1.mission {
+  color: #fff;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.7rem;
   width: 80%;
 }
 .about-hero-section-contentTwo {
@@ -62,7 +70,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
-  line-height: normal;
+  line-height: 2rem;
 }
 .about-hero-section-contentThree {
   display: flex;

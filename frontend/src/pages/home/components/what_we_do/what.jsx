@@ -1,34 +1,26 @@
 import './what.css';
-import mobilescreens from '../../../../assets/images/mobilescreens.png';
 import ServiceCard from './HomeServiceCard';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const WhatWeDoComponent = () => {
-  const services = [
-    {
-      title: 'Mobile Development',
-      description:
-        'We build functional and secure mobile applications for Android and iOS devices. From basic apps to complex systems, we are in to help you.',
-      image: mobilescreens,
-    },
-    {
-      title: 'Web Development',
-      description:
-        'We create responsive and high-performance websites that engage users and drive conversions.',
-      image: mobilescreens,
-    },
-    {
-      title: 'UI/UX Design',
-      description:
-        'Our design team creates user-friendly interfaces and engaging experiences that keep users coming back.',
-      image: mobilescreens,
-    },
-    {
-      title: 'Cloud Solutions',
-      description:
-        'We provide scalable and secure cloud solutions tailored to your business needs.',
-      image: mobilescreens,
-    },
-  ];
+   const [services, setServices] = useState([]);
+
+
+   useEffect(() => {
+     getServices();
+   }, []);
+
+   const getServices = async () => {
+     try {
+       const { data } = await axios.get(
+         "https://staruthwebsite-api.vercel.app/services/getServices"
+       );
+       setServices(data);
+     } catch (error) {
+       console.error(error);
+     } 
+   };
 
   return (
     <div className="container home-what-we-do-section-container">
@@ -40,8 +32,8 @@ const WhatWeDoComponent = () => {
           <ServiceCard
             key={index}
             title={service.title}
-            description={service.description}
-            image={service.image}
+            description={service.shortDescription}
+            image={service.icon}
           />
         ))}
       </div>
