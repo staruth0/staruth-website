@@ -29,6 +29,7 @@ const ProjectList = () => {
     const response = await fetch('https://staruthwebsite-api.vercel.app/projects/getProjects'); 
     const data = await response.json();
     setProjects(data);
+    console.log(data)
   };
 
   return (
