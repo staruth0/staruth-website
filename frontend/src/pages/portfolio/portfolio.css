@@ -1,4 +1,4 @@
-/* Card styling */
+/* Card styling
 .portfolio-card {
   margin-bottom: 10%;
   color: #fff;
@@ -70,8 +70,6 @@
 .swiper-navigations span.active {
   background-color: #26ce3d;
 }
-
-/* Card bottom styling */
 .card-bottom {
   display: flex;
   justify-content: space-between;
@@ -114,4 +112,10 @@
 .card-bottom span {
   font-size: 0.8rem;
   font-weight: 200;
+} */
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

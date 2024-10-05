@@ -1,0 +1,36 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #1D1D1D;
+  border-radius: 8px;
+}
+
+.each-slide img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 300px;
+}
+
+/* Dots (indicators) */
+.react-slideshow-container .indicators {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.react-slideshow-container .indicators .each-slideshow-indicator {
+  cursor: pointer;
+  background-color: #C3FBCB;
+  height: 25px;
+  width: 25px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.react-slideshow-container .indicators .active {
+  background-color: #26CE3D;
+}

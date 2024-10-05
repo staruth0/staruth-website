@@ -12,6 +12,7 @@ import ServicesPage from './pages/services';
 import ContactPage from './pages/contact_us/contact';
 import TeamPage from './pages/teamOnClick/index';
 import PortfolioPage from './pages/portfolio';
+import ProjectDetail from './pages/PortfolioDetail/portfolioDetail';
 
 //Stylesheet
 import './App.css';
@@ -28,6 +29,7 @@ function App() {
           <Route path="contact" element={<ContactPage />} />
           <Route path="portfolio" element={<PortfolioPage />} />
           <Route path="services" element={<ServicesPage />} />
+          <Route path="portfolio/detail/:id" element={<ProjectDetail />} />
         </Route>
       </>
     )
