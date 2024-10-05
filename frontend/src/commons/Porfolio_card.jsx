@@ -2,12 +2,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import '../pages/portfolio/portfolio.css';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 export default function Card(props) {
+
+
   return (
     <section className="portfolio-card">
       <Swiper
@@ -28,6 +31,7 @@ export default function Card(props) {
           </div>
         </SwiperSlide>
 
+
         <SwiperSlide>
           <div className="slide">
             <div className="swiper-text">
@@ -49,6 +53,8 @@ export default function Card(props) {
             <img src={props.imageURL} alt="Apple Watch" />
           </div>
         </SwiperSlide>
+        {/* More SwiperSlides here */}
+        
       </Swiper>
 
       <section className="card-bottom">
@@ -65,7 +71,8 @@ export default function Card(props) {
           </div>
         </div>
 
-        <a className="see-more-btn">See More</a>
+        {/* Link to dynamic portfolio page */}
+        <Link to={`/portfolio/${portfolioId}`} className="see-more-btn">See More</Link>
       </section>
     </section>
   );

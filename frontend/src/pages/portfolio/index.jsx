@@ -30,7 +30,6 @@ const ProjectList = () => {
     const data = await response.json();
     setProjects(data);
   };
-
   return (
     <div className="project-list">
       {projects.map((project, index) => (
