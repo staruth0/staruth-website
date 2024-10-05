@@ -3,8 +3,9 @@
 	width: 100%;
 	max-height: 100vh;
 	border-radius: 8px;
-	overflow: hidden;
-	margin: 40px 20px;
+	overflow-y: scroll;
+	margin: 40px 0px;
+    
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -20,17 +21,20 @@
 .project-info > div:nth-child(2) {
 	min-width: 100px;
 }
-
+.project-info>div:first-child {
+    max-width: 1000px;
+}
 .project-info .project-card-title {
-	font-size: 1.2rem;
-	font-weight: 500;
+	font-size: 2rem;
+	font-weight: 600;
 	color: #fefefe;
 }
 
 .project-info .project-card-description {
 	color: #fefefe;
-	font-size: 0.9rem;
-	font-weight: 200;
+	font-size: 1.1rem;
+	font-weight: 300;
+    line-height: 1.5;
 }
 
 .project-info h3 {

@@ -4,7 +4,7 @@ import { ButtonPrimary } from "../../../../commons/Button.jsx";
 import { useNavigate } from 'react-router-dom';
 import "./ProjectCard.css";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project,seeMore,longDesc }) => {
     const navigate = useNavigate();
       const handleSeeMore = () => {
     navigate(`/portfolio/detail/${project._id}`);
@@ -16,9 +16,10 @@ const ProjectCard = ({ project }) => {
 			<div className="project-info">
 				<div>
 					<span className="project-card-title">{project.title}</span>
-					<br />
+					<br /><br />
 					<span className="project-card-description">
-						{project.shortDescription}
+                        {!longDesc && (project.shortDescription)}
+                        {longDesc && (project.longDescription)}
 					</span>
 					<h3>How we helped:</h3>
 					<div className="tags">
@@ -30,7 +31,7 @@ const ProjectCard = ({ project }) => {
 					</div>
 				</div>
 				<div onClick={handleSeeMore}>
-					<ButtonPrimary title={"See more →"} />
+					{seeMore && (<ButtonPrimary title={"See more →"} />)}
 				</div>
 			</div>
 		</div>
