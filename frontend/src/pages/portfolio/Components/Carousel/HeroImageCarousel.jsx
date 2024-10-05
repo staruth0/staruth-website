@@ -1,4 +1,3 @@
-import React from 'react';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import './HeroImageCarousel.css';
@@ -12,7 +11,7 @@ const HeroImageCarousel = ({ images }) => {
             <img src={image} alt={`Hero ${index}`} className="carousel-image" />
           </div>
         ))}
-      </Slide>
+      </Slide>  
     </div>
   );
 };

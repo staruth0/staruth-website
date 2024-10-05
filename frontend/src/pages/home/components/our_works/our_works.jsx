@@ -1,4 +1,3 @@
-import React from 'react';
 import './our_works.css';
 import { ButtonOutlinedBlack } from '../../../../commons/Button';
 import { Link } from 'react-router-dom';
