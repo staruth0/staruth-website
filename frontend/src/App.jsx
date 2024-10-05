@@ -4,7 +4,7 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-
+import { useEffect } from 'react';
 //Pages
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
@@ -14,11 +14,24 @@ import TeamPage from './pages/teamOnClick/index';
 import PortfolioPage from './pages/portfolio';
 import ProjectDetail from './pages/PortfolioDetail/portfolioDetail';
 
+//aos libray
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 //Stylesheet
 import './App.css';
 import RootLayout from './layout/RootLayout';
 
 function App() {
+
+    useEffect(() => {
+      AOS.init({
+        offset: 120, 
+        duration: 600, 
+        easing: "ease-in-out", 
+        delay: 100, 
+      });
+    }, []);
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>

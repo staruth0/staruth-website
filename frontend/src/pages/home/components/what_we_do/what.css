@@ -57,6 +57,7 @@
 }
 .home-what-we-do-section-container-service-cards-container-cards img {
   border-radius: 12px;
+  max-height: 300px;
 }
 .home-what-we-do-section-container-service-cards-container-cards h3 {
   font-size: 18px;
