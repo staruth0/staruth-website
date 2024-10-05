@@ -15,7 +15,9 @@
 .team-on-click-skills-container div{
     width: 30%;
 }
-
+.team-on-click-skills-container h3{
+  font-size: 30px;
+}
 
 .team-on-click-skills-container-Qualifications ul{
     display: flex;
@@ -46,21 +48,41 @@ p, li{
   @media (max-width: 768px) {
     .team-on-click-skills-container {
       max-width: 600px; /* adjust the max-width for smaller screens */
+      gap: 20%;
+    }
+    h1{
+        font-size: 28px;
     }
   }
   
   @media (max-width: 480px) {
     .team-on-click-skills-container {
       max-width: 400px; /* adjust the max-width for smaller screens */
+      flex-direction: column;
+      padding: 30px;
+      
     }
     .team-on-click-skills-container-tools h1,
     .team-on-click-skills-container-Qualifications h1,
     .team-on-click-skills-container-Achievements h1 {
       font-size: 20px; /* adjust the font size for smaller screens */
+      
+    margin-bottom: 20px;
     }
     .team-on-click-skills-container-tools p,
     .team-on-click-skills-container-Qualifications ul,
     .team-on-click-skills-container-Achievements p {
       font-size: 14px; /* adjust the font size for smaller screens */
+    
+    }.team-on-click-skills-container-tools ,
+    .team-on-click-skills-container-Qualifications,
+    .team-on-click-skills-container-Achievements  {
+      font-size: 14px; /* adjust the font size for smaller screens */
+  
+    
     }
+    .team-on-click-skills-container div{
+      width: 100%;
+  }
+
   }

@@ -14,8 +14,6 @@ const HomeSlidableSection = () => {
         <Slide />
         <Slide />
         <Slide />
-        <Slide />
-        <Slide />
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ import {
   serviceRouter,
   teamRouter,
   testimonialRouter,
+  aboutGalleryRouter
 } from "./src/routes/index.js";
 import httpStatus from "http-status";
 
@@ -51,6 +52,7 @@ app.use("/projects", projectRouter);
 app.use("/services", serviceRouter);
 app.use("/teams", teamRouter);
 app.use("/testimonials", testimonialRouter);
+app.use("/aboutGallery", aboutGalleryRouter);
 
 app.use((req, res, next) => {
   next(new Error(httpStatus.NOT_FOUND, 'Not found'));

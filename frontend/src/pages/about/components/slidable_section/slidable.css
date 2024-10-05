@@ -1,16 +1,19 @@
-.home-slidable-section * {
+/* General styles */
+.about-slidable-section * {
   font-family: var(--font-family);
   margin: 0;
   padding: 0;
 }
-.home-slidable-section {
+
+.about-slidable-section {
   background: var(--on-black);
   display: flex;
   flex-direction: column;
   gap: 112px;
   padding: 56px 80px;
 }
-.home-slidable-section-content-heading {
+
+.about-slidable-section-content-heading {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -19,34 +22,57 @@
   border-bottom: 1px solid var(--sf-green);
   opacity: var(--sds-size-stroke-border);
 }
-.home-slidable-section-content-heading h1 {
+
+.about-slidable-section-content-heading h1 {
   color: var(--sf-green, #1d1d1d);
   text-align: right;
   font-family: Inter;
   font-size: 76px;
   font-style: normal;
   font-weight: 700;
-  line-height: 80px;
+  line-height: 90%;
   letter-spacing: -1.52px;
   margin: 0;
   width: 40%;
 }
 
-/* .home-slidable-section h1{
-    color:var(--orange-light);
-} */
+/* Scrollable list */
 #list {
   display: flex;
   flex-direction: row;
   background: transparent;
-  /* shall be correctly animated */
+  overflow-x: auto;
   scroll-behavior: smooth;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  width: 100%;
+  white-space: nowrap;
+  /* Prevent line breaks */
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: var(--sf-green) transparent;
 }
-.home-slidable-section li {
-  width: auto;
+
+#list::-webkit-scrollbar {
+  height: 8px;
+  /* Height of the scrollbar */
+}
+
+#list::-webkit-scrollbar-track {
+  background: transparent;
+  /* Transparent track */
+}
+
+#list::-webkit-scrollbar-thumb {
+  background-color: var(--sf-green);
+  /* Scrollbar color */
+  border-radius: 20px;
+  /* Rounded scrollbar */
+}
+
+/* List item styling */
+#list li {
+  flex: 0 0 400px;
+  /* Each card has a fixed width of 400px */
+  margin-right: 16px;
+  /* Spacing between cards */
   transform: scale(0.9);
   height: 520px;
   background: var(--sf-on-pm-black);
@@ -55,7 +81,7 @@
   border-radius: 24px;
 }
 
-.home-slidable-section li div {
+.about-slidable-section-value {
   width: 100%;
   height: 100%;
   padding: 170px 32px;
@@ -65,123 +91,67 @@
   font-weight: 500;
   background: var(--sf-green);
 }
-.home-slidable-section li:first-child div {
+
+.about-slidable-section li:first-child div {
   background: var(--primary-orange);
   color: var(--on-orange);
 }
-.home-slidable-section li:nth-child(2) div {
+
+.about-slidable-section li:nth-child(2) div {
   background: var(--primary-white);
   color: var(--on-black);
 }
-.home-slidable-section li:nth-child(3) div {
+
+.about-slidable-section li:nth-child(3) div {
   color: var(--sf-green-light);
 }
-.home-slidable-section li:nth-child(4) div {
+
+.about-slidable-section li:nth-child(4) div {
   background: var(--primary-black);
   color: var(--strokecolor-black);
 }
-.home-slidable-section li:nth-child(5) div {
+
+.about-slidable-section li:nth-child(5) div {
   background: var(--orange-light);
   color: var(--strokecolor-black);
 }
-=======
-.about-slidable-section *{
-    font-family:var(--font-family);
-    margin:0;
-    padding:0;
-}
-.about-slidable-section{
-    background: var(--on-black);
-    display:flex;
-    flex-direction: column;
-    gap:112px;
-    padding:56px 80px;
-    width:100vw;
-}
-.about-slidable-section-content-heading{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 18px;
-    border-bottom:1px solid var(--sf-green);
-    opacity: var(--sds-size-stroke-border);
-}
-.about-slidable-section-content-heading h1 {
-    color: var(--sf-green, #1d1d1d);
-    text-align: right;
-    font-family: Inter;
-    font-size: 76px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 90%;
-    letter-spacing: -1.52px;
-    margin: 0;
-    width:40%;
-  }
-  
-/* .about-slidable-section h1{
-    color:var(--orange-light);
-} */
-#list{
-    display:flex;
-    flex-direction: row;
-    background:transparent;
-    /* shall be correctly animated */
-    scroll-behavior: smooth;
-    overflow-x:hidden;
-    white-space:nowrap;
-    scrollbar-width: none;
-    width:100%;    
-   
 
-}
-#list li{
-    width:400px;
-    transform:scale(0.9);
-    height:520px;
-    background:var(--sf-on-pm-black);
-    text-align:center;
-    padding:24px;
-    border-radius:24px 
-}
-
-.about-slidable-section-value{
-    width: 100%;
-    height:100%;
-    padding:170px 32px;
-    border-radius:14px;
-    font-size: 40px;
-    text-align:left;
-    font-weight:500;
-    background:var(--sf-green);
-}
-.about-slidable-section li:first-child div{
-    background:var(--primary-orange);
-    color:var(--on-orange);
-}
-.about-slidable-section li:nth-child(2) div{
-    background:var(--primary-white);
-    color:var(--on-black);
-}
-.about-slidable-section li:nth-child(3) div{
-    color:var(--sf-green-light);
-}
-.about-slidable-section li:nth-child(4) div{
-    background:var(--primary-black);
-    color:var(--strokecolor-black);
-}
-.about-slidable-section li:nth-child(5) div{
-    background:var(--orange-light);
-    color:var(--strokecolor-black);
-}
-
+/* Mobile responsiveness */
 @media (max-width: 1000px) {
-    .about-slidable-section{
-      padding: 80px 20px;
-    }
-    .about-slidable-section h1 {
-      font-size: 56px;
-      width:90%
-    }
+  .about-slidable-section {
+    padding: 80px 20px;
+  }
+
+  .about-slidable-section h1 {
+    font-size: 56px;
+    width: 90%;
+  }
+
+  #list li {
+    flex: 0 0 300px;
+    /* Shrink the card width for smaller screens */
+    height: 400px;
+  }
+
+  .about-slidable-section-value {
+    font-size: 32px;
+    padding: 120px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-slidable-section h1 {
+    font-size: 36px;
+  }
+
+  #list li {
+    flex: 0 0 250px;
+    /* Further reduce width for very small screens */
+    height: 350px;
+  }
+
+  .about-slidable-section-value {
+    font-size: 28px;
+    padding: 100px 16px;
+  }
 }

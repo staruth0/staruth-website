@@ -13,7 +13,7 @@
 .home-slidable-section-slider {
   display: flex;
   gap: 18px;
-  animation: slide 60s linear infinite;
+  animation: slide 6s linear infinite;
 
   padding: 1rem !important;
 }
@@ -47,19 +47,9 @@
   background: var(--primary-white, #fefefe);
 }
 
-/* animation for infinite scrolling */
-/* @keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-} */
-
 @keyframes slide {
   0% {
-    transform: translateX(60%);
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(-100%);

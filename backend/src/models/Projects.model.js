@@ -1,35 +1,27 @@
 import mongoose from 'mongoose';
 
-const reviewSchema = new mongoose.Schema({
-  image: { type: String },
-  title: { type: String, required: true },
-  message: { type: String, required: true }
-});
-
-const featureSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  description: { type: String, required: true }
-});
-
-const challengeSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  description: { type: String, required: true },
-  solution: { type: String },
-  solutionDescription: { type: String }
+// Define Project Numbers as a dynamic key-value schema
+const projectNumberSchema = new mongoose.Schema({
+  metric: { type: String, required: true }, // E.g., "Conversion Rate", "Successful Payments"
+  value: { type: String, required: true }   // E.g., "120%", "98%"
 });
 
 const projectSchema = new mongoose.Schema({
-  heroImage: { type: String },
+  heroImages: [{ type: String }],
   title: { type: String, required: true },
-  category: { type: String, required: true },
-  supTitle: { type: String },
+  category: [{ type: String, required: true }],
   shortDescription: { type: String, required: true },
   longDescription: { type: String },
-  gallery: [{ type: String }],
-  reviews: [reviewSchema],
+  initialRequest: { type: String },
+  analysis: { type: String },
+  findings: [{ type: String }],
+  solutionDevelop: {
+    description: { type: String, required: true },
+    solutions:[{type:String}]
+  },
+  projectNumbers: [projectNumberSchema],
+  review: { type: String },
   video: { type: String },
-  features: [featureSchema],
-  challenges: [challengeSchema]
 });
 
 const Project = mongoose.model('Project', projectSchema);

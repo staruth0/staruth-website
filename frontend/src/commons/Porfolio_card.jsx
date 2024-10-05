@@ -8,7 +8,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-export default function Card({ imageURL, portfolioId }) {
+export default function Card(props) {
+
+
   return (
     <section className="portfolio-card">
       <Swiper
@@ -25,10 +27,32 @@ export default function Card({ imageURL, portfolioId }) {
               <p>SERIES 9</p>
               <a href="#">Learn More</a>
             </div>
-            <img src={imageURL} alt="Apple Watch" />
+            <img src={props.imageURL} alt="Apple Watch" />
           </div>
         </SwiperSlide>
 
+
+        <SwiperSlide>
+          <div className="slide">
+            <div className="swiper-text">
+              <h1>Apple Watch</h1>
+              <p>SERIES 9</p>
+              <a href="#">Learn More</a>
+            </div>
+            <img src={props.imageURL} alt="Apple Watch" />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="slide">
+            <div className="swiper-text">
+              <h1>Apple Watch</h1>
+              <p>SERIES 9</p>
+              <a href="#">Learn More</a>
+            </div>
+            <img src={props.imageURL} alt="Apple Watch" />
+          </div>
+        </SwiperSlide>
         {/* More SwiperSlides here */}
         
       </Swiper>
