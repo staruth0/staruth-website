@@ -2,10 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faCheckCircle,
-	faStar,
-	faHeart,
-	faHandHolding,
 	faHandHoldingHeart,
 	faWarning,
 } from "@fortawesome/free-solid-svg-icons";

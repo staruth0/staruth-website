@@ -1,37 +1,90 @@
 .carousel {
   position: relative;
   width: 100%;
-  overflow: scroll auto;
   max-height: 60vh;
+  /* Set a maximum height to show part of the image */
   background-color: #1D1D1D;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.carousel-image {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.image-container {
+  height: 50vh;
+  /* Set a fixed height */
+  overflow-y: scroll;
+  /* Enable vertical scrolling */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;/* Let the image take its natural height */
+  object-fit: cover;
   border-radius: 8px;
 }
 
-.each-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
+/* Navigation buttons */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.carousel-control.prev {
+  left: 10px;
+  /* Left side for "Previous" */
+}
+
+.carousel-control.next {
+  right: 10px;
+  /* Right side for "Next" */
 }
 
 /* Dots (indicators) */
-.react-slideshow-container .indicators {
+.carousel-dots {
   display: flex;
   justify-content: center;
   position: absolute;
   bottom: 10px;
+  /* Positioned at the bottom */
   width: 100%;
+  z-index: 2;
 }
 
-.react-slideshow-container .indicators .each-slideshow-indicator {
-  cursor: pointer;
-  background-color: #C3FBCB;
-  height: 25px;
-  width: 25px;
+.carousel-dots .dot {
+  height: 15px;
+  width: 15px;
   margin: 0 5px;
+  background-color: #C3FBCB;
   border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.react-slideshow-container .indicators .active {
+.carousel-dots .dot.active {
   background-color: #26CE3D;
 }
