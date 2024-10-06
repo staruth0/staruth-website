@@ -121,6 +121,10 @@
   background: var(--black-strokecolor-black, #3d3d3d);
 }
 
+.contact-form-input textarea {
+  min-height: 100px;
+}
+
 @media (max-width: 900px) {
   .contact-form-container p {
     max-width: unset;
