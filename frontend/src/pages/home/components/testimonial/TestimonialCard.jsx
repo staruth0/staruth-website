@@ -13,7 +13,7 @@ const TestimonialCard = ({ testimonial }) => {
   return (
     <div className="home-testimonial-card">
       <div className="home-testimonial-img-rating">
-        <img src={image} alt="" />
+        <img src={image} alt="" width={70} />
         {/* <div className="ratings-container">
           {Array.from({ length: fullStars }, (_, index) => (
             <img key={`full-${index}`} src={fullStar} alt="Full Star" />
@@ -25,8 +25,8 @@ const TestimonialCard = ({ testimonial }) => {
         </div> */}
       </div>
       <h3 className="name">{name}</h3>
-      <h2 className="title">{title}</h2>
-      <p>{message}</p>
+      <p className="title">{title}</p>
+      <p>{` " ${message} " `}</p>
     </div>
   );
 };

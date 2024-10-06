@@ -49,6 +49,7 @@
 
 .home-what-we-do-section-container-service-cards-container-cards img {
   max-height: 400px;
+  min-height: 250px;
   object-fit: fill;
 }
 

@@ -8,7 +8,13 @@ import arrowLeft from '../../assets/icons/arrow-left-white.png';
 import './portfolio.css';
 import { Link } from 'react-router-dom';
 
-const PortfolioCard = ({ _id, title, shortDescription, category, heroImages }) => {
+const PortfolioCard = ({
+  _id,
+  title,
+  shortDescription,
+  category,
+  heroImages,
+}) => {
   return (
     <div className="portfolio-card" data-aos="fade-up">
       <Swiper
@@ -18,7 +24,11 @@ const PortfolioCard = ({ _id, title, shortDescription, category, heroImages }) =
       >
         {heroImages.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={image} alt={`Slide ${index + 1}`} />
+            <img
+              className="swiper-image"
+              src={image}
+              alt={`Slide ${index + 1}`}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -37,8 +47,8 @@ const PortfolioCard = ({ _id, title, shortDescription, category, heroImages }) =
           to={`/portfolio/detail/${_id}`}
           className="portfolio-see-more-button"
         >
-          <span>See more about this work</span>{" "}
-          <img src={arrowLeft} alt="arrow-left" width={"40px"} />
+          <span>See More</span>{' '}
+          <img src={arrowLeft} alt="arrow-left" width={'40px'} />
         </Link>
       </div>
     </div>

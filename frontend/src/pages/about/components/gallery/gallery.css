@@ -26,6 +26,7 @@
 .about-gallery-item img {
   width: 100%; /* Full width of the item */
   height: auto; /* Maintain aspect ratio */
+  min-height: 150px;
   display: block; /* Remove bottom space */
   filter: grayscale(0.9);
 }
