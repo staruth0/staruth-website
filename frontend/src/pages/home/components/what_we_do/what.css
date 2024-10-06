@@ -40,13 +40,18 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 30px;
-  border-radius: 16px 0px;
+  border-radius: 16px;
   background: var(--on-black);
 
   height: auto;
 }
+
+.home-what-we-do-section-container-service-cards-container-cards img {
+  max-height: 400px;
+  object-fit: fill;
+}
+
 .home-what-we-do-section-container-service-cards-container-card-text-n-btn {
   display: flex;
   gap: 40px;
@@ -69,24 +74,6 @@
   font-size: 14px;
   font-weight: 100;
   width: 100%;
-}
-.home-what-we-do-section-container-service-cards-container-card-text-n-btn-btn {
-  visibility: hidden;
-  transform: translateY(20px);
-  opacity: 0;
-}
-
-.home-what-we-do-section-container-service-cards-container-cards:hover
-  .home-what-we-do-section-container-service-cards-container-card-text-n-btn-btn {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.home-what-we-do-section-container-service-cards-container-card-text-n-btn-btn
-  img {
-  width: 50px;
-  height: 50px;
 }
 
 @media (max-width: 400px) {
