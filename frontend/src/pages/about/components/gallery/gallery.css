@@ -27,6 +27,7 @@
   width: 100%; /* Full width of the item */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Remove bottom space */
+  filter: grayscale(0.9);
 }
 
 .about-gallery-item:hover {
