@@ -1,48 +1,47 @@
 .about-gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  /* Responsive grid */
-  gap: 16px;
-  padding: 16px;
-  max-width: 1200px;
-  /* Max width for the about-gallery */
-  margin: auto;
-  /* Center the about-gallery */
+  padding: 16px; /* Padding around the container */
+  max-width: 1200px; /* Max width for the about-gallery */
+  margin: auto; /* Center the about-gallery */
+}
+
+.my-masonry-grid {
+  display: flex; /* Flex layout for masonry */
+  margin-left: -16px; /* Adjust for spacing */
+  width: auto; /* Required for flex container */
+}
+
+.my-masonry-grid_column {
+  padding-left: 20px; /* Space between columns */
+  background-clip: padding-box; /* Ensure background color fills the column */
 }
 
 .about-gallery-item {
   overflow: hidden;
-  border-radius: 8px;
-  /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow */
-  transition: transform 0.2s;
-  /* Animation for hover */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s; /* Animation for hover */
+  margin-bottom: 16px; /* Space between items */
 }
 
 .about-gallery-item img {
-  width: 100%;
-  height: auto;
-  /* Maintain aspect ratio */
-  display: block;
+  width: 100%; /* Full width of the item */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove bottom space */
 }
 
 .about-gallery-item:hover {
-  transform: scale(1.05);
-  /* Zoom effect on hover */
+  transform: scale(1.05); /* Zoom effect on hover */
 }
 
 .loader {
-  text-align: center;
-  font-size: 24px;
-  margin-top: 50px;
-  /* Center the loader */
+  text-align: center; /* Center the loader */
+  font-size: 24px; /* Loader font size */
+  margin-top: 50px; /* Margin above loader */
 }
 
 .error {
-  color: red;
-  text-align: center;
-  font-size: 18px;
-  margin-top: 50px;
-  /* Center the error message */
+  color: red; /* Error text color */
+  text-align: center; /* Center the error message */
+  font-size: 18px; /* Error font size */
+  margin-top: 50px; /* Margin above error message */
 }
