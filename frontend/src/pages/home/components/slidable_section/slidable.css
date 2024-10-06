@@ -13,14 +13,38 @@
 .home-slidable-section-slider {
   display: flex;
   gap: 18px;
-  animation: slide 6s linear infinite;
+  overflow-x: auto;
+  padding: 1rem 2rem !important;
+  scrollbar-width: thin; /* For Firefox */
+}
 
-  padding: 1rem !important;
+/* For WebKit browsers (Chrome, Safari) */
+.home-slidable-section-slider::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar */
+}
+
+.home-slidable-section-slider::-webkit-scrollbar-track {
+  background: transparent; /* Background of the track */
+}
+
+.home-slidable-section-slider::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.home-slidable-section-slider::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.home-slidable-section-slider::-webkit-scrollbar-corner {
+  background: transparent; /* Background of the scrollbar corner */
 }
 
 .home-slidable-section-slides {
   min-width: 300px;
-  max-width: 350px;
+  width: 350px;
+  max-width: 400px;
   flex: 1;
 
   padding: 18px;
@@ -32,6 +56,7 @@
 .home-slidable-section-slides > div {
   display: flex;
   align-items: center;
+  filter: grayscale(0.9);
   height: 100%;
   padding: 18px;
   border-radius: 32px;
@@ -45,13 +70,4 @@
   border-radius: var(--bd-radius-32, 32px);
 
   background: var(--primary-white, #fefefe);
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }

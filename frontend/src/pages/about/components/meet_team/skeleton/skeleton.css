@@ -1,0 +1,24 @@
+.about-team-skeleton-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  gap: 20px;
+}
+
+.about-team-skeleton-image {
+  height: 360px;
+  width: 100%;
+  background-color: #ececec;
+  border-radius: 10px 10px 0 0;
+
+  margin-bottom: 1rem;
+}
+
+.about-team-skeleton-text {
+  height: 16px;
+  width: 100%;
+  background-color: #ececec;
+  border-radius: 6px;
+
+  margin-top: 8px;
+}
