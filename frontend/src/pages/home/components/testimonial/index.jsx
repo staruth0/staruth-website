@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './testimonial.css';
 import TestimonialCard from './TestimonialCard';
 import testimonial_avatar from '../../../../assets/images/testimonial_avatar.png';
 
 const HomeTestimonial = () => {
+  const listRef = useRef(null);
+  const [scrollDirection, setScrollDirection] = useState(1); // 1 for forward, -1 for reverse
+  const [isScrolling, setIsScrolling] = useState(true); // Track whether scrolling is active
+
   const testimonials = [
     {
       name: 'Alice Johnson',
@@ -37,6 +41,43 @@ const HomeTestimonial = () => {
     },
   ];
 
+  useEffect(() => {
+    const list = listRef.current;
+    const scrollSpeed = 2; // Scroll speed
+    let scrollInterval;
+
+    const startScrolling = () => {
+      if (!isScrolling) return; // Only scroll if scrolling is active
+
+      scrollInterval = setInterval(() => {
+        if (list) {
+          list.scrollLeft += scrollSpeed * scrollDirection;
+
+          // Reverse direction at the edges
+          if (list.scrollLeft + list.clientWidth >= list.scrollWidth) {
+            setScrollDirection(-1); // Scroll back to the left
+          } else if (list.scrollLeft <= 0) {
+            setScrollDirection(1); // Scroll forward again
+          }
+        }
+      }, 16); // Approx 60fps for smooth scrolling
+    };
+
+    startScrolling();
+
+    return () => clearInterval(scrollInterval); // Cleanup on unmount
+  }, [scrollDirection, isScrolling]); // React on direction or scroll state changes
+
+  const handleMouseDown = (e) => {
+    if (e.button === 0) {
+      setIsScrolling(false); // Pause scrolling
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsScrolling(true); // Resume scrolling
+  };
+
   return (
     <div className="container home-testimonial-section">
       <div className="home-testimonial-header">
@@ -45,9 +86,15 @@ const HomeTestimonial = () => {
       <div className="home-testimonial-btn-review-text">
         <p>Client Reviews</p>
       </div>
-      <div className="home-testimonial-items">
-        {testimonials.map((testimonial) => (
-          <TestimonialCard testimonial={testimonial} key={testimonial.id} />
+      <div
+        className="home-testimonial-items"
+        ref={listRef}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp} // Ensure resume if the user drags the mouse out
+      >
+        {testimonials.map((testimonial, index) => (
+          <TestimonialCard testimonial={testimonial} key={index} />
         ))}
       </div>
       <div className="home-sponsors-icons">

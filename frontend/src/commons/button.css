@@ -13,9 +13,6 @@
   font-size: 18px;
 }
 
-.btn-black,
-.btn-primary-white {
-}
-
-.btn-white {
+.btn-primary:hover {
+  background-color: var(--primary-white);
 }

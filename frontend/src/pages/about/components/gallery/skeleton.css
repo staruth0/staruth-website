@@ -1,0 +1,15 @@
+/* skeleton.css */
+.about-gallery-skeleton-item {
+  background: #f0f0f0; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  height: auto;
+  overflow: hidden; /* Ensure no overflow */
+  margin-bottom: 16px; /* Space between items */
+}
+
+.about-gallery-skeleton-image {
+  width: 100%;
+  background: var(--strokecolor-black); /* Slightly darker gray */
+  height: 220px;
+}
