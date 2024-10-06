@@ -1,52 +1,49 @@
-.contact-form{
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.contact-form {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-.contact-form h1{
-    width: 30%;
-    text-align: center;
+.contact-form h1 {
+  width: 30%;
+  text-align: center;
 }
 
-.contact-form .form{
- display: flex;
- flex-direction: column;
- gap: 30px;
- width: 40%;
- padding: 20px;
- border: 1px solid  var( --strokecolor-black);
- border-radius: 20px;
+.contact-form .form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 40%;
+  padding: 20px;
+  border: 1px solid var(--strokecolor-black);
+  border-radius: 20px;
 }
 
-.contact-form .form div{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.contact-form .form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.contact-form .form div input{
-    width: 100%;
-    background-color: var(--strokecolor-black);
-    padding: 12px;
-    outline: none;
-    border: transparent;
-    border-radius: 20px;
+.contact-form .form div input {
+  width: 100%;
+  background-color: var(--strokecolor-black);
+  padding: 12px;
+  outline: none;
+  border: transparent;
+  border-radius: 20px;
 }
 
-
-.contact-form .form div textarea{
-    min-height: 200px;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: var(--strokecolor-black);
-    color: inherit;
-    border: transparent;
+.contact-form .form div textarea {
+  min-height: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--strokecolor-black);
+  color: inherit;
+  border: transparent;
 }
-=======
-.contact-form-section h1 {
+======= .contact-form-section h1 {
   font-size: 76px;
 }
 
@@ -141,5 +138,10 @@
 @media (max-width: 560px) {
   .contact-form-section h1 {
     font-size: 56px;
+  }
+
+  .contact-form-input input,
+  .contact-form-input textarea {
+    width: 100%;
   }
 }
