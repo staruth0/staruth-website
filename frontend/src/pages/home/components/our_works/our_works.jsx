@@ -2,8 +2,26 @@ import './our_works.css';
 import { ButtonOutlinedBlack } from '../../../../commons/Button';
 import { Link } from 'react-router-dom';
 import PortfolioGrid from '../../../../commons/portfolio/PortfolioGrid';
+import { useState,useEffect } from 'react';
 
 const HomeOurWroksSection = () => {
+
+
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+      fetchProjects();
+    }, []);
+
+    const fetchProjects = async () => {
+      const response = await fetch(
+        "https://staruthwebsite-api.vercel.app/projects/getProjects"
+      );
+      const data = await response.json();
+      setProjects(data);
+      console.log(data);
+  };
+  
   const portfolioItems = [
     {
       title: 'Project One',
@@ -31,7 +49,7 @@ const HomeOurWroksSection = () => {
       <div className="home-our-work-section-header">
         <h1>Our Works</h1>
       </div>
-      <PortfolioGrid items={portfolioItems} />
+      <PortfolioGrid items={projects} />
       <Link to="/portfolio/">
         <ButtonOutlinedBlack title="more about us" />
       </Link>

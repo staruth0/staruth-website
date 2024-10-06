@@ -4,17 +4,17 @@ import halfStar from '../../../../assets/icons/half_star.png';
 import emptyStar from '../../../../assets/icons/empty_star.png';
 
 const TestimonialCard = ({ testimonial }) => {
-  const { rating, img, name, text } = testimonial;
+  const { title, image, name, message } = testimonial;
 
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 !== 0;
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+  // const fullStars = Math.floor(rating);
+  // const hasHalfStar = rating % 1 !== 0;
+  // const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
   return (
     <div className="home-testimonial-card">
       <div className="home-testimonial-img-rating">
-        <img src={img} alt="" />
-        <div className="ratings-container">
+        <img src={image} alt="" />
+        {/* <div className="ratings-container">
           {Array.from({ length: fullStars }, (_, index) => (
             <img key={`full-${index}`} src={fullStar} alt="Full Star" />
           ))}
@@ -22,10 +22,11 @@ const TestimonialCard = ({ testimonial }) => {
           {Array.from({ length: emptyStars }, (_, index) => (
             <img key={`empty-${index}`} src={emptyStar} alt="Empty Star" />
           ))}
-        </div>
+        </div> */}
       </div>
       <h3 className="name">{name}</h3>
-      <p>{text}</p>
+      <h2 className="title">{title}</h2>
+      <p>{message}</p>
     </div>
   );
 };

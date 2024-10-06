@@ -8,15 +8,15 @@ import arrowLeft from '../../assets/icons/arrow-left-white.png';
 import './portfolio.css';
 import { Link } from 'react-router-dom';
 
-const PortfolioCard = ({ id, title, description, category, images }) => {
+const PortfolioCard = ({ _id, title, shortDescription, category, heroImages }) => {
   return (
-    <div className="portfolio-card">
+    <div className="portfolio-card" data-aos="fade-up">
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={10}
         pagination={{ clickable: true }}
       >
-        {images.map((image, index) => (
+        {heroImages.map((image, index) => (
           <SwiperSlide key={index}>
             <img src={image} alt={`Slide ${index + 1}`} />
           </SwiperSlide>
@@ -26,16 +26,19 @@ const PortfolioCard = ({ id, title, description, category, images }) => {
       <div className="portfolio-details">
         <div className="portfolio-info">
           <h3>{title}</h3>
-          <p>{description}</p>
+          <p>{shortDescription}</p>
           <div className="portfolio-info-departments">
             {category.map((cat, index) => (
               <span key={index}>{cat}</span>
             ))}
           </div>
         </div>
-        <Link to={`/portfolio/${id}`} className="portfolio-see-more-button">
-          <span>See more about this work</span>{' '}
-          <img src={arrowLeft} alt="arrow-left" width={'40px'} />
+        <Link
+          to={`/portfolio/detail/${_id}`}
+          className="portfolio-see-more-button"
+        >
+          <span>See more about this work</span>{" "}
+          <img src={arrowLeft} alt="arrow-left" width={"40px"} />
         </Link>
       </div>
     </div>
