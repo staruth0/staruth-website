@@ -1,44 +1,35 @@
-// import Card from '../../commons/Porfolio_card';
-// import portfolioImage1 from '../../assets/images/applewatch.jpg';
-
-// const PortfolioPage = () => {
-//   return (
-//     <div className="container">
-//       <Card imageURL={portfolioImage1} />
-//       <Card imageURL={portfolioImage1} />
-//       <Card imageURL={portfolioImage1} />
-//       <Card imageURL={portfolioImage1} />
-//     </div>
-//   );
-// };
-
-// export default PortfolioPage;
-
 import React, { useEffect, useState } from 'react';
-import ProjectCard from './Components/card/ProjectCard.jsx';
 import './portfolio.css';
+import PortfolioGrid from '../../commons/portfolio_dark/PortfolioGrid.jsx';
+import Skeleton from './Components/skeleton/Skeleton.jsx';
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchProjects();
   }, []);
 
   const fetchProjects = async () => {
-    const response = await fetch('https://staruthwebsite-api.vercel.app/projects/getProjects'); 
-    const data = await response.json();
-    setProjects(data);
-    console.log(data)
+    try {
+      const response = await fetch(
+        'https://staruthwebsite-api.vercel.app/projects/getProjects'
+      );
+      const data = await response.json();
+      setProjects(data);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <div className="project-list">
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} seeMore={true} />
-      ))}
+      {loading ? <Skeleton /> : <PortfolioGrid items={projects} />}
     </div>
   );
 };
 
 export default ProjectList;
-

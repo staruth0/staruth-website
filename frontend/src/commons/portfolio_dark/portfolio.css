@@ -6,10 +6,12 @@
 }
 
 .portfolio-card {
-  border: 1px solid var(--white-strokecolor-white, #e7e7e7);
   border-radius: 8px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--on-black);
+  border: 1px solid var(--on-black);
+
+  color: #fff;
 }
 
 .swiper-wrapper {
@@ -19,6 +21,10 @@
 .portfolio-card img {
   width: 100%;
   object-fit: cover;
+}
+
+.portfolio-card .swiper-pagination-bullet {
+  background: var(--primary-white);
 }
 
 .portfolio-card .swiper-pagination-bullet-active {
@@ -80,8 +86,12 @@
   align-items: center;
   gap: 10px;
   border-radius: 30px;
-  color: var(--primary-white);
-  background: var(--black-primary-black, #1d1d1d);
+  color: var(--on-black);
+  background: var(--primary-green);
+}
+
+.portfolio-see-more-button:hover {
+  background-color: var(--primary-white);
 }
 
 .portfolio-see-more-button span {

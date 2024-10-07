@@ -46,6 +46,11 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   background-color: var(--strokecolor-black);
@@ -59,7 +64,6 @@ html {
 .container {
   padding: 56px 5%;
   margin: 0 auto;
-  max-width: 1700px;
 }
 
 .main-body {

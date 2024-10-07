@@ -40,7 +40,7 @@ const ProfileCard = () => {
   }
 
   if (error) {
-    return <p>Error: {error}</p>;
+    return <p>Something went wrong</p>;
   }
 
   if (teamMembers.length === 0) {
