@@ -2,11 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import './testimonial.css';
 import TestimonialCard from './TestimonialCard';
 import testimonial_avatar from '../../../../assets/images/testimonial_avatar.png';
+import axios from 'axios';
 
 const HomeTestimonial = () => {
   const listRef = useRef(null);
   const [scrollDirection, setScrollDirection] = useState(1); // 1 for forward, -1 for reverse
   const [isScrolling, setIsScrolling] = useState(true); // Track whether scrolling is active
+
+  const [testimonial, setTestimonial] = useState([]);
 
   const testimonials = [
     {
@@ -40,6 +43,24 @@ const HomeTestimonial = () => {
       text: 'Staruth has been a game-changer for our team. The interface is user-friendly, and it has really improved our workflow.',
     },
   ];
+
+  useEffect(() => {
+    getTestimonials();
+  },[])
+
+  async function getTestimonials() {
+    try {
+      
+      const { data } = await axios.get(
+        "https://staruthwebsite-api.vercel.app/testimonials/getTestimonials"
+      );
+      console.log(data)
+      setTestimonial(data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
 
   useEffect(() => {
     const list = listRef.current;
@@ -93,7 +114,7 @@ const HomeTestimonial = () => {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp} // Ensure resume if the user drags the mouse out
       >
-        {testimonials.map((testimonial, index) => (
+        {testimonial.map((testimonial, index) => (
           <TestimonialCard testimonial={testimonial} key={index} />
         ))}
       </div>

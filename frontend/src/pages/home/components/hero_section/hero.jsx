@@ -4,6 +4,7 @@ import heroimg from '../../../../assets/images/hero-image.png';
 import clients from '../../../../assets/images/clients.png';
 import rating from '../../../../assets/images/rating.png';
 import { ButtonOutlinedWhite, ButtonPrimary } from '../../../../commons/Button';
+import { Link } from 'react-router-dom';
 
 const HomeHeroComponent = () => {
   return (
@@ -18,8 +19,12 @@ const HomeHeroComponent = () => {
             and your work to new heights in the digital space
           </p>
           <div className="home-hero-section-container-btn-grp">
-            <ButtonPrimary title="Let's collaborate" />
-            <ButtonOutlinedWhite title="see our works" />
+            <Link to={`/contact`}>
+              <ButtonPrimary title="Let's collaborate" />
+            </Link>
+            <Link to={`/portfolio`}>
+              <ButtonOutlinedWhite title="see our works" />
+            </Link>
           </div>
         </div>
         <div className="home-hero-section-container-heroimg">

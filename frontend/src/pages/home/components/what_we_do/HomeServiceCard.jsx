@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ title, description, image }) => {
   return (
-    <Link className="home-what-we-do-section-container-service-cards-container-cards">
+    <Link
+      className="home-what-we-do-section-container-service-cards-container-cards"
+      data-aos="fade-up"
+    >
       <img src={image} alt={title} />
       <div
         to="/services"
