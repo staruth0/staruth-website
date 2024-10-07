@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/bundle';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
-import arrowLeft from '../../assets/icons/arrow-left-white.png';
+import arrowLeft from '../../assets/icons/arrow-left-dark.png';
 
 import './portfolio.css';
 import { Link } from 'react-router-dom';
@@ -16,7 +16,7 @@ const PortfolioCard = ({
   heroImages,
 }) => {
   return (
-    <div className="portfolio-card" data-aos="fade-up">
+    <div className="portfolio-card-white" data-aos="fade-up">
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={10}
