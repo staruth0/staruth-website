@@ -30,12 +30,16 @@ const ProjectDetail = () => {
   }, [id]);
 
   if (!project) {
-    return <p>Loading...</p>;
+    return (
+      <div className="container portfolio-detail-loading">
+        <p></p>
+      </div>
+    );
   }
 
   return (
     <div className="project-detail">
-      <div className="project-hero-onclick">
+      <div className="project-hero-onclick container">
         <ProjectCard
           project={project}
           seeMore={false}
@@ -43,11 +47,11 @@ const ProjectDetail = () => {
         />
       </div>
       {/* Project Information */}
-      <div className="project-info">
+      <div className="container">
         {/**initial client request */}
         <section className="project-request">
           <div>
-            <h1>Our Clients Initial Request</h1>
+            <h2>Our Clients Initial Request</h2>
           </div>
           <div>
             <p>{project.initialRequest}</p>
@@ -56,17 +60,13 @@ const ProjectDetail = () => {
         {/* Analysis Section */}
         <section className="project-analysis">
           <div>
-            <h1>Analysis and Findings</h1>
+            <h2>Analysis and Findings</h2>
           </div>
           <div>
             <p>{project.analysis}</p>
             <ul>
               {project.findings.map((finding, index) => (
                 <li key={index}>
-                  <span>
-                    <FontAwesomeIcon icon={faWarning} />
-                  </span>
-                  {` `}
                   <span>{finding}</span>
                 </li>
               ))}
@@ -77,17 +77,13 @@ const ProjectDetail = () => {
         {/* Solution Developed */}
         <section className="project-solution">
           <div>
-            <h1>Solution Developed</h1>
+            <h2>Solution Developed</h2>
           </div>
           <div>
             <p>{project.solutionDevelop.description}</p>
             <ul>
               {project.solutionDevelop.solutions.map((solution, index) => (
                 <li key={index}>
-                  <span>
-                    <FontAwesomeIcon icon={faHandHoldingHeart} />
-                  </span>
-                  {` `}
                   <span>{solution}</span>
                 </li>
               ))}
@@ -113,7 +109,7 @@ const ProjectDetail = () => {
         {/* Client Review */}
         <section className="project-review">
           <div>
-            <h1>Client's Remark</h1>
+            <h2>Client's Remark</h2>
           </div>
           <div>
             <p>{project.review}</p>
@@ -121,7 +117,7 @@ const ProjectDetail = () => {
         </section>
 
         {/* Demo Video */}
-        <section className="project-video">
+        <section>
           <h2>Demo Video</h2>
           <video width="100%" controls>
             <source src={project.video} type="video/mp4" />

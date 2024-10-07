@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './portfolio.css';
 import PortfolioGrid from '../../commons/portfolio_dark/PortfolioGrid.jsx';
-import Skeleton from './Components/skeleton/Skeleton.jsx';
+import Skeleton from '../../commons/portfolio_dark/skeleton/Skeleton.jsx';
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
