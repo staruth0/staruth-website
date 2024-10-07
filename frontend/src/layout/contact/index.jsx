@@ -4,57 +4,57 @@ import './contact.css';
 import SuccessCard from '../../commons/successformcard/SuccessCard';
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false)
-  
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [loading, setLoading] = useState(false); // Add loading state
+
   function setIsSuccessFalse() {
     setIsSuccess(false);
 
-         setName("");
-         setEmail("");
-         setMessage("");
+    setName('');
+    setEmail('');
+    setMessage('');
   }
 
-   const onSubmit = async (event) => {
-     event.preventDefault();
-     const formData = new FormData(event.target);
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    const formData = new FormData(event.target);
 
-     formData.append("access_key", "a98c48cb-cab5-434d-8015-7c1fd7cc737b");
+    formData.append('access_key', 'a98c48cb-cab5-434d-8015-7c1fd7cc737b');
 
-     const object = Object.fromEntries(formData);
-     const json = JSON.stringify(object);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
-     const res = await fetch("https://api.web3forms.com/submit", {
-       method: "POST",
-       headers: {
-         "Content-Type": "application/json",
-         Accept: "application/json",
-       },
-       body: json,
-     }).then((res) => res.json());
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: json,
+    }).then((res) => res.json());
 
-     if (res.success) {
-       console.log("Success", res);
-       setIsSuccess(true);    
+    setLoading(false);
+    if (res.success) {
+      console.log('Success', res);
+      setIsSuccess(true);
 
-       setTimeout(() => {
-         setIsSuccess(false);
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 4500);
 
-       }, 4500)
-       
-        setName("");
-        setEmail("");
-        setMessage("");
-     }
-
-
-   };
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
+  };
 
   return (
     <>
-      { isSuccess && <SuccessCard setIsSuccessFalse={setIsSuccessFalse}/>}
+      {isSuccess && <SuccessCard setIsSuccessFalse={setIsSuccessFalse} />}
       <div className="container contact-form-section">
         <h1>Let's get to work</h1>
         <div className="contact-form-container">
@@ -96,7 +96,7 @@ const Contact = () => {
               />
             </div>
 
-            <ButtonPrimary title="Submit request" />
+            <ButtonPrimary title="Submit request" disabled={loading} />
           </form>
         </div>
       </div>

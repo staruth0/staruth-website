@@ -14,10 +14,10 @@ const WhatWeDoComponent = () => {
 
   const getServices = async () => {
     try {
-      const { data } = await axios.get(
+      const response = await axios.get(
         'https://staruthwebsite-api.vercel.app/services/getServices'
       );
-      setServices(data);
+      setServices(response.data);
     } catch (error) {
       console.error(error);
     } finally {

@@ -1,17 +1,19 @@
-.service-skeleton {
+.portfolio-home-skeleton {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 2rem;
+
+  padding-top: 2rem;
 }
 
-.service-skeleton > div {
+.portfolio-home-skeleton > div {
   background-color: var(--on-black);
   border-radius: 1rem;
   min-height: 400px;
 }
 
 @media (max-width: 400px) {
-  .service-skeleton {
+  .portfolio-home-skeleton {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
   }

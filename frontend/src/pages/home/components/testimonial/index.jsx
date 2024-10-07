@@ -3,64 +3,32 @@ import './testimonial.css';
 import TestimonialCard from './TestimonialCard';
 import testimonial_avatar from '../../../../assets/images/testimonial_avatar.png';
 import axios from 'axios';
+import Skeleton from './skeleton/Skeleton';
 
 const HomeTestimonial = () => {
   const listRef = useRef(null);
   const [scrollDirection, setScrollDirection] = useState(1); // 1 for forward, -1 for reverse
   const [isScrolling, setIsScrolling] = useState(true); // Track whether scrolling is active
-
+  const [loading, setLoading] = useState(true);
   const [testimonial, setTestimonial] = useState([]);
-
-  const testimonials = [
-    {
-      name: 'Alice Johnson',
-      rating: 4.5,
-      img: testimonial_avatar,
-      text: 'Staruth has transformed our development process. Their tools are intuitive and make collaboration seamless. Highly recommend!',
-    },
-    {
-      name: 'Mark Smith',
-      rating: 4,
-      img: testimonial_avatar,
-      text: 'The software is robust and reliable. Staruth support is top-notch, making it easy to resolve any issues quickly.',
-    },
-    {
-      name: 'Emily Davis',
-      rating: 5,
-      img: testimonial_avatar,
-      text: 'I absolutely love using Staruth! It has everything we need to manage our projects effectively and efficiently.',
-    },
-    {
-      name: 'James Wilson',
-      rating: 3.5,
-      img: testimonial_avatar,
-      text: 'Great software, but there are a few features I wish were more customizable. Overall, a solid choice for teams.',
-    },
-    {
-      name: 'Sophia Brown',
-      rating: 4.2,
-      img: testimonial_avatar,
-      text: 'Staruth has been a game-changer for our team. The interface is user-friendly, and it has really improved our workflow.',
-    },
-  ];
 
   useEffect(() => {
     getTestimonials();
-  },[])
+  }, []);
 
   async function getTestimonials() {
     try {
-      
       const { data } = await axios.get(
-        "https://staruthwebsite-api.vercel.app/testimonials/getTestimonials"
+        'https://staruthwebsite-api.vercel.app/testimonials/getTestimonials'
       );
-      console.log(data)
+      console.log(data);
       setTestimonial(data);
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   }
-
 
   useEffect(() => {
     const list = listRef.current;
@@ -107,17 +75,21 @@ const HomeTestimonial = () => {
       <div className="home-testimonial-btn-review-text">
         <p>Client Reviews</p>
       </div>
-      <div
-        className="home-testimonial-items"
-        ref={listRef}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp} // Ensure resume if the user drags the mouse out
-      >
-        {testimonial.map((testimonial, index) => (
-          <TestimonialCard testimonial={testimonial} key={index} />
-        ))}
-      </div>
+      {loading ? (
+        <Skeleton />
+      ) : (
+        <div
+          className="home-testimonial-items"
+          ref={listRef}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp} // Ensure resume if the user drags the mouse out
+        >
+          {testimonial.map((testimonial, index) => (
+            <TestimonialCard testimonial={testimonial} key={index} />
+          ))}
+        </div>
+      )}
       <div className="home-sponsors-icons">
         <div className="home-sponsors-icon">
           <img src="" alt="" />
