@@ -1,12 +1,12 @@
-.services-our-services-section {
-  color: #fff;
-  padding: 0px 80px;
-  padding-bottom: 250px;
-  font-family: var(--font-family);
+.services-our-services-section-cards {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
 }
 
-.services-our-services-section-container {
-  margin-bottom: 120px;
+.services-our-services-section {
+  color: #fff;
 }
 
 .services-our-services-section h2 {
@@ -14,25 +14,44 @@
   flex-shrink: 0;
 }
 
+/* service cards styles */
+.services-our-services-section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
 .services-our-services-section-header {
   display: flex;
-  gap: 14px;
+  justify-content: space-between;
   align-items: center;
+  gap: 14px;
+
+  overflow-x: auto;
+}
+
+.services-our-services-section-header > p {
+  max-width: 640px;
+  min-width: 400px;
 }
 
 .services-our-services-section-header div {
   display: flex;
   align-items: center;
   gap: 32px;
+
+  max-width: 630px;
+  min-width: 400px;
 }
 
 .services-our-services-section-header .service-icon {
-  width: 102.4px;
-  height: 128px;
+  width: 100px;
+  height: auto;
 }
 
-.services-our-services-section-header h1 {
+.services-our-services-section-header h3 {
   font-size: 32px;
+  font-weight: 700;
 }
 
 .services-our-services-section-header p {
@@ -41,20 +60,51 @@
 
 .services-our-services-section-main-images {
   display: flex;
-  overflow: hidden;
-  gap: 10px;
+  overflow-x: auto;
+  gap: 16px;
+  width: 100%;
+  padding: 1rem 0.5rem 1.5rem 0.5rem;
+  scrollbar-width: thin; /* For Firefox */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.services-our-services-section-main-images::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar */
+}
+
+.services-our-services-section-main-images::-webkit-scrollbar-track {
+  background: transparent; /* Background of the track */
+}
+
+.services-our-services-section-main-images::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.services-our-services-section-main-images::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.services-our-services-section-main-images::-webkit-scrollbar-corner {
+  background: transparent; /* Background of the scrollbar corner */
 }
 
 .services-our-services-section-main-images img {
   align-self: stretch;
-  width: 516px;
+  width: 450px;
+  height: auto;
+  min-height: 200px;
+  max-height: 400px;
   border-radius: 8px;
+  object-fit: fill;
+  flex-shrink: 0;
 }
 
 .services-our-services-section-main .navigations {
   float: right;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 56px;
   align-self: stretch;
   margin-top: 24px;
@@ -62,4 +112,61 @@
 
 .services-our-services-section-main .navigations img {
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.services-our-services-section-main .navigations img:hover {
+  opacity: 0.8;
+}
+
+.services-our-services-section-main .navigations img[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .services-our-services-section {
+    padding: 0 20px;
+  }
+
+  .services-our-services-section-header .service-icon {
+    width: 80px;
+  }
+
+  .services-our-services-section-header h1 {
+    font-size: 28px;
+  }
+
+  .services-our-services-section-header p {
+    font-size: 16px;
+  }
+
+  .services-our-services-section-main .navigations img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 930px) {
+  .services-our-services-section-header {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .services-our-services-section-header > div,
+  .services-our-services-section-header > p {
+    max-width: unset;
+    min-width: unset;
+  }
+
+  .services-our-services-section-header > div h3 {
+    font-size: 24px;
+  }
+
+  .services-our-services-section-container {
+    gap: 32px;
+  }
 }

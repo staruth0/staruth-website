@@ -14,12 +14,14 @@ const TeamPage = () => {
   useEffect(() => {
     const fetchMemberData = async () => {
       try {
-        setLoading(true)
-        const response = await axios.get(`https://staruthwebsite-api.vercel.app/teams/getTeamMember/${id}`);
+        setLoading(true);
+        const response = await axios.get(
+          `https://staruthwebsite-api.vercel.app/teams/getTeamMember/${id}`
+        );
         setMember(response.data);
       } catch (err) {
         setError('Failed to fetch member data');
-        console.error("Error fetching team member data:", err);
+        console.error('Error fetching team member data:', err);
       } finally {
         setLoading(false);
       }
@@ -30,28 +32,27 @@ const TeamPage = () => {
 
   if (loading) {
     return (
-      <div className='about-page'>
-        <div className='team_onclick_loding'>Loading member details...</div>
+      <div className="about-page">
+        <div className="team_onclick_loding">Loading member details...</div>
       </div>
-    
     );
   }
 
   if (error) {
-   return (
-      <div className='about-page'>
-        <div className='team_onclick_loding'>A error occur while Loading member details...</div>
+    return (
+      <div className="about-page">
+        <div className="team_onclick_loding">
+          An error occur while Loading member details...
+        </div>
       </div>
-    
     );
   }
 
   if (!member) {
     return (
-      <div className='about-page'>
-        <div className='team_onclick_loding'>Loading member failed...</div>
+      <div className="about-page">
+        <div className="team_onclick_loding">Loading member failed...</div>
       </div>
-    
     );
   }
 

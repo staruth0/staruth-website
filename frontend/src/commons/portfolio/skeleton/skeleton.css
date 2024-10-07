@@ -1,0 +1,20 @@
+.portfolio-home-skeleton-white {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  padding-top: 2rem;
+}
+
+.portfolio-home-skeleton-white > div {
+  background-color: #ecebeb;
+  border-radius: 1rem;
+  min-height: 500px;
+}
+
+@media (max-width: 1100px) {
+  .portfolio-home-skeleton-white {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

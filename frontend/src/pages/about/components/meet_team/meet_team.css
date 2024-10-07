@@ -74,6 +74,7 @@
   .about-meet-team-section-content-description p {
     width: 80%;
     /* Allow text to take more space */
+  }
 }
 
 @media (max-width: 600px) {

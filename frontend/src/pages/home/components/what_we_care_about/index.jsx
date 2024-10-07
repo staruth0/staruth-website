@@ -10,20 +10,23 @@ const HomeWhatWeCareAbout = () => {
     {
       id: 1,
       img: quality,
-      title: 'Quality',
-      description: 'lorem20',
+      title: "Quality",
+      description:
+        "We deliver top-notch solutions, focusing on precision, innovation, and excellence in every detail.",
     },
     {
       id: 2,
       img: time,
-      title: 'Time',
-      description: 'lorem20',
+      title: "Time",
+      description:
+        "Efficient project management ensures we meet your deadlines without compromising quality.",
     },
     {
       id: 3,
       img: budget,
-      title: 'Budget',
-      description: 'lorem20',
+      title: "Budget",
+      description:
+        "Our cost-effective strategies guarantee maximum value, tailored to fit within your budget.",
     },
   ];
   return (

@@ -1,34 +1,119 @@
+.portfolio-detail-loading {
+  height: 90vh;
+  max-height: 800px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 1rem !important;
+}
+
+.portfolio-detail-loading p {
+  height: 100%;
+  width: 100%;
+  margin-top: 6rem !important;
+  background-color: var(--on-black);
+  border-radius: 1rem;
+}
+
 /* src/components/ProjectDetail.css */
 .project-detail {
-    padding: 20px;
-    max-width: 2000px;
-    margin: 0 auto;
-    background-color: blueviolet;
+  max-width: 2000px;
+  position: relative;
+  margin: 0 auto;
+  color: #fefefe;
 }
 
-.project-info {
-    margin-top: 20px;
+.project-detail .container > section {
+  padding-bottom: 3rem;
 }
 
+.project-detail .container > section h2 {
+  max-width: 650px;
+}
+
+.project-detail h2 {
+  font-size: 32px;
+}
+
+.project-request,
 .project-analysis,
 .project-solution,
 .project-numbers,
+.project-review {
+  margin: 30px 0;
+  width: 100%;
+}
+
+.project-request,
+.project-analysis,
 .project-review,
-.project-video {
-    margin: 30px 0;
+.project-solution {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(245, 236, 236, 0.1);
 }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.project-request > div:last-child,
+.project-analysis > div:last-child,
+.project-solution > div:last-child,
+.project-review > div:last-child {
+  max-width: 700px;
+  line-height: 1.5;
+  text-align: justify;
 }
 
-ul {
-    list-style: disc;
-    padding-left: 20px;
+.project-numbers {
+  border-bottom: 1px solid rgba(245, 236, 236, 0.1);
+}
+.project-numbers h2 {
+  margin-bottom: 60px;
+  color: var(--white-primary-white);
+}
+
+.project-numbers ul {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-numbers ul > li > div:first-child {
+  font-weight: 600;
+  font-size: 2rem;
 }
 
 .project-numbers li {
-    font-size: 18px;
-    margin-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.project-solution ul,
+.project-analysis ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-solution ul li,
+.project-analysis ul li {
+  margin-left: 22px;
+  list-style-type: disc;
+  font-weight: 400;
+}
+
+.project-solution ul li span,
+.project-analysis ul li span {
+  font-weight: 400;
+}
+
+@media (max-width: 700px) {
+  .project-request,
+  .project-analysis,
+  .project-review,
+  .project-solution {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
 }
