@@ -28,11 +28,13 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-left: 10px;
 }
 
 .navbar-component-logo-label img {
-  width: 56px;
-  height: 56px;
+  width: 83px;
+  height: 83px;
+  
 }
 
 .navbar-component-logo-label span {
@@ -85,7 +87,7 @@
 
 .navbar-component-request-service > a {
   display: flex;
-  padding: 20px 15px;
+  padding: 16px 15px;
   justify-content: center;
   align-items: center;
   gap: 10px;

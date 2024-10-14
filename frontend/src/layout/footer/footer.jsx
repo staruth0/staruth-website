@@ -1,4 +1,4 @@
-import logo from '../../assets/icons/logoPNG 1.svg';
+import logo from '../../assets/images/staruth1.png';
 import facebook from '../../assets/icons/Facebook.svg';
 import linkedIn from '../../assets/icons/linkedin.svg';
 import github from '../../assets/icons/github.svg';
@@ -13,7 +13,7 @@ const FooterComponent = () => {
     <div className="footer-component">
       <div className="footer-component-first-section">
         <div className="footer-component-logo-label">
-          <img src={logo} alt="logo" />
+          <img src={logo} className='img' alt="logo" />
           <span>Staruth Technologies</span>
         </div>
         <p>Building solutions with the next big impact makers</p>
