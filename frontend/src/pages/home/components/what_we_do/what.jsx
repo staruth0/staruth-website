@@ -9,6 +9,7 @@ import AOS from 'aos';
 const WhatWeDoComponent = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     getServices();
@@ -23,6 +24,7 @@ const WhatWeDoComponent = () => {
       setServices(response.data);
     } catch (error) {
       console.error(error);
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -37,6 +39,9 @@ const WhatWeDoComponent = () => {
       >
         <h1 className="display-lg">What we do</h1>
       </div>
+      {error && !loading && (
+        <p>Something went wrong, failed to load projects</p>
+      )}
       {loading ? (
         <Skeleton />
       ) : (

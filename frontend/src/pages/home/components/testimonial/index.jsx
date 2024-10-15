@@ -10,6 +10,7 @@ const HomeTestimonial = () => {
   const [scrollDirection, setScrollDirection] = useState(1); // 1 for forward, -1 for reverse
   const [isScrolling, setIsScrolling] = useState(true); // Track whether scrolling is active
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [testimonial, setTestimonial] = useState([]);
 
   useEffect(() => {
@@ -26,6 +27,7 @@ const HomeTestimonial = () => {
       setTestimonial(data);
     } catch (error) {
       console.error(error);
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -82,6 +84,9 @@ const HomeTestimonial = () => {
           Client Reviews
         </p>
       </div>
+      {error && !loading && (
+        <p>Something went wrong, failed to load projects</p>
+      )}
       {loading ? (
         <Skeleton />
       ) : (

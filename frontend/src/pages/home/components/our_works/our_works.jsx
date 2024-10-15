@@ -10,6 +10,7 @@ import AOS from 'aos';
 const HomeOurWroksSection = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -26,6 +27,7 @@ const HomeOurWroksSection = () => {
       console.log(data);
     } catch (error) {
       console.log(error);
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -40,6 +42,9 @@ const HomeOurWroksSection = () => {
       >
         <h1>Our Works</h1>
       </div>
+      {error && !loading && (
+        <p>Something went wrong, failed to load projects</p>
+      )}
       {loading ? <Skeleton /> : <PortfolioGrid items={projects} />}
       <Link to="/portfolio/">
         <ButtonOutlinedBlack title="more about us" />

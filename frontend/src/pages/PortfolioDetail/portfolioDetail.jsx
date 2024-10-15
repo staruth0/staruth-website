@@ -7,6 +7,7 @@ import AOS from 'aos';
 const ProjectDetail = () => {
   const { id } = useParams();
   const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchProject = async () => {
@@ -18,6 +19,7 @@ const ProjectDetail = () => {
         setProject(data);
       } catch (error) {
         console.error('Error fetching project data:', error);
+        setLoading(true);
       }
     };
 
@@ -28,7 +30,7 @@ const ProjectDetail = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  if (!project) {
+  if (loading) {
     return (
       <div className="container portfolio-detail-loading">
         <p></p>
@@ -36,7 +38,7 @@ const ProjectDetail = () => {
     );
   }
 
-  return (
+  return project ? (
     <div className="project-detail">
       <div className="project-hero-onclick container">
         <ProjectCard
@@ -149,6 +151,10 @@ const ProjectDetail = () => {
           </video>
         </section>
       </div>
+    </div>
+  ) : (
+    <div className="container portfolio-detail-loading">
+      <p></p>
     </div>
   );
 };

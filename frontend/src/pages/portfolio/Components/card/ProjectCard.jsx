@@ -1,29 +1,52 @@
-import React from 'react';
-import HeroImageCarousel from '../Carousel/HeroImageCarousel.jsx';
+import React, { useEffect } from 'react';
 import './ProjectCard.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/bundle';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import AOS from 'aos';
 
-const ProjectCard = ({ project, longDesc }) => {
+const PortfolioCard = ({ project, longDesc }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div className="project-card">
-      <HeroImageCarousel images={project.heroImages} />
-      <div className="project-info">
-        <h2 className="project-card-title">{project.title}</h2>
+    <div
+      className="portfolio-card-dark"
+      data-aos="zoom-in"
+      data-aos-once="true"
+    >
+      <Swiper
+        modules={[Navigation, Pagination]}
+        spaceBetween={10}
+        pagination={{ clickable: true }}
+      >
+        {project.heroImages.map((image, index) => (
+          <SwiperSlide key={index}>
+            <img
+              className="swiper-image"
+              src={image}
+              alt={`Slide ${index + 1}`}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-        <span className="project-card-description">
-          {!longDesc && project.shortDescription}
-          {longDesc && project.longDescription}
-        </span>
-        <h3 style={{ marginBottom: '-10px' }}>How we helped:</h3>
-        <div className="tags">
-          {project.category.map((cat, index) => (
-            <span key={index} className="tag">
-              {cat}
-            </span>
-          ))}
+      <div className="portfolio-details">
+        <div className="portfolio-info">
+          <h3>{project.title}</h3>
+          <p>{longDesc}</p>
+          <p style={{ marginBottom: '-8px' }}>How we helped:</p>
+          <div className="portfolio-info-departments">
+            {project.category.map((cat, index) => (
+              <span key={index}>{cat}</span>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default ProjectCard;
+export default PortfolioCard;

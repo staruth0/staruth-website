@@ -32,7 +32,7 @@
 }
 .home-what-we-do-section-container-service-cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
   justify-content: center;
 }
@@ -40,7 +40,6 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   border-radius: 16px;
   background: var(--on-black);
 
@@ -48,15 +47,16 @@
 }
 
 .home-what-we-do-section-container-service-cards-container-cards img {
-  max-height: 400px;
-  min-height: 250px;
+  height: 300px;
   object-fit: fill;
+
+  border-radius: 16px 16px 0px 0px;
 }
 
 .home-what-we-do-section-container-service-cards-container-card-text-n-btn {
   display: flex;
   gap: 40px;
-  padding: 20px;
+  padding: 16px 20px;
 }
 
 .home-what-we-do-section-container-service-cards-container-card-text-n-btn-text {
@@ -65,10 +65,7 @@
   flex-direction: column;
   gap: 16px;
 }
-.home-what-we-do-section-container-service-cards-container-cards img {
-  border-radius: 16px 16px 0px 0px;
-  object-fit: cover;
-}
+
 .home-what-we-do-section-container-service-cards-container-cards h3 {
   font-size: 18px;
 }
