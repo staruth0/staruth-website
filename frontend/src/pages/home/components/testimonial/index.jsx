@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './testimonial.css';
 import TestimonialCard from './TestimonialCard';
-import testimonial_avatar from '../../../../assets/images/testimonial_avatar.png';
 import axios from 'axios';
 import Skeleton from './skeleton/Skeleton';
+import AOS from 'aos';
 
 const HomeTestimonial = () => {
   const listRef = useRef(null);
@@ -13,6 +13,7 @@ const HomeTestimonial = () => {
   const [testimonial, setTestimonial] = useState([]);
 
   useEffect(() => {
+    AOS.init({ duration: 1000 });
     getTestimonials();
   }, []);
 
@@ -69,11 +70,17 @@ const HomeTestimonial = () => {
 
   return (
     <div className="container home-testimonial-section">
-      <div className="home-testimonial-header">
+      <div
+        className="home-testimonial-header"
+        data-aos="fade-up"
+        data-aos-once="true"
+      >
         <h1>What clients say about us</h1>
       </div>
       <div className="home-testimonial-btn-review-text">
-        <p>Client Reviews</p>
+        <p data-aos="fade-up" data-aos-once="true">
+          Client Reviews
+        </p>
       </div>
       {loading ? (
         <Skeleton />

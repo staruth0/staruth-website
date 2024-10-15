@@ -15,7 +15,6 @@ import PortfolioPage from './pages/portfolio';
 import ProjectDetail from './pages/PortfolioDetail/portfolioDetail';
 
 //aos libray
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import PortfolioDetailPage from './pages/portfolio/PortfolioDetailPage';
 
@@ -24,14 +23,6 @@ import './App.css';
 import RootLayout from './layout/RootLayout';
 
 function App() {
-  useEffect(() => {
-    AOS.init({
-      offset: 120,
-      duration: 1500,
-      easing: 'ease-in-out',
-      delay: 100,
-    });
-  }, []);
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
@@ -51,9 +42,9 @@ function App() {
   );
 
   return (
-    <div className="main-body">
+    <>
       <RouterProvider router={router} />
-    </div>
+    </>
   );
 }
 

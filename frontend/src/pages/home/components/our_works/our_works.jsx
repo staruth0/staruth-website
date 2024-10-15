@@ -5,11 +5,14 @@ import PortfolioGrid from '../../../../commons/portfolio/PortfolioGrid';
 import { useState, useEffect } from 'react';
 import Skeleton from '../../../../commons/portfolio/skeleton/Skeleton';
 
+import AOS from 'aos';
+
 const HomeOurWroksSection = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    AOS.init({ duration: 1000 });
     fetchProjects();
   }, []);
 
@@ -30,7 +33,11 @@ const HomeOurWroksSection = () => {
 
   return (
     <div className="container home-our-work-section">
-      <div className="home-our-work-section-header">
+      <div
+        className="home-our-work-section-header"
+        data-aos="fade-up"
+        data-aos-once="true"
+      >
         <h1>Our Works</h1>
       </div>
       {loading ? <Skeleton /> : <PortfolioGrid items={projects} />}

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './slidable.css';
+import AOS from 'aos';
 
 const HomeSlidableSection = () => {
   const listRef = useRef(null);
@@ -7,6 +8,8 @@ const HomeSlidableSection = () => {
   const [isScrolling, setIsScrolling] = useState(true); // Track whether scrolling is active
 
   useEffect(() => {
+    AOS.init({ duration: 1000 });
+
     const list = listRef.current;
     let scrollSpeed = 2; // Scroll speed
     let scrollInterval;
@@ -49,7 +52,11 @@ const HomeSlidableSection = () => {
 
   return (
     <div className="about-slidable-section">
-      <div className="about-slidable-section-content-heading">
+      <div
+        className="about-slidable-section-content-heading"
+        data-aos="fade-up"
+        data-aos-once="true"
+      >
         <h1>Values that fuel our drive</h1>
       </div>
 

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './hero.css';
+import AOS from 'aos';
 
 const AboutHeroComponent = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <div className="about-hero-section">
-      <div className="about-hero-section-contentOne" data-aos="fade-right">
-        <h1>
+      <div className="about-hero-section-contentOne">
+        <h1 data-aos="fade-up" data-aos-once="true">
           At Staruth, we collaborate with start-ups, brands, businesses, and
           founders to develop innovative tech products and systems that enable
           them to break through in the digital space. We believe in harnessing
@@ -13,10 +17,12 @@ const AboutHeroComponent = () => {
           individuals and organizations to make a lasting impact.
         </h1>
       </div>
-      <div className="about-hero-section-contentTwo" data-aos="fade-left">
+      <div className="about-hero-section-contentTwo">
         <div>
-          <h1>Our Vision</h1>
-          <p>
+          <h1 data-aos="fade-up" data-aos-once="true">
+            Our Vision
+          </h1>
+          <p data-aos="fade-up" data-aos-once="true">
             To create a future where empowered youths utilize technology to
             revolutionize industries, drive economic growth, and promote
             sustainable practices, while actively addressing global challenges
@@ -27,8 +33,8 @@ const AboutHeroComponent = () => {
           </p>
         </div>
       </div>
-      <div className="about-hero-section-contentOne" data-aos="fade-right">
-        <h1 className="mission">
+      <div className="about-hero-section-contentOne">
+        <p className="mission" data-aos="fade-up" data-aos-once="true">
           Our mission is to equip young people with cutting-edge technological
           tools and skills that enable them to solve pressing global issues,
           from transforming agriculture to reducing poverty, fostering
@@ -37,7 +43,7 @@ const AboutHeroComponent = () => {
           Africa and beyond to harness technology for positive change and to
           bring the United Nations Sustainable Development Goals (SDGs) to life
           through tech-driven innovation.
-        </h1>
+        </p>
       </div>
     </div>
   );

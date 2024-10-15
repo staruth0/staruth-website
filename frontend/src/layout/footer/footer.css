@@ -100,9 +100,9 @@ a.active-footer-link {
   font-size: 14px;
 }
 
-  .footer-component-logo-label img {
-    width: 120px;
-  }
+.footer-component-logo-label img {
+  width: 120px;
+}
 
 /* media queries */
 @media (max-width: 1000px) {
@@ -145,7 +145,7 @@ a.active-footer-link {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .footer-component {
     flex-direction: column;
   }
