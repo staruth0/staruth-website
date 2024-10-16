@@ -24,12 +24,10 @@ const HomePageAboutComponent = () => {
             About us
           </h3>
           <p data-aos="fade-up" data-aos-once="true">
-            We are a tech start-up passionate about designing and building
-            innovative solutions that empower the next generation of impact
-            makers to thrive in a fast-changing digital landscape. From
-            strategic design to mobile and web applications, we create products
-            that streamline your processes, boost productivity, and drive
-            profits, while addressing crucial needs.
+            We design and build innovative tech solutions to empower the next
+            generation of impact makers. From strategic design to mobile and web
+            applications, our products streamline processes, boost productivity,
+            and drive profits, all while addressing key needs.
             <br />
             <br />
             Our dedication goes beyond technology—we are eager to contribute to
@@ -38,7 +36,7 @@ const HomePageAboutComponent = () => {
             sustainability solutions, and technologies to combat poverty, we aim
             to shape a better and more sustainable future for all
           </p>
-          <Link to={'/portfolio'}>
+          <Link to={"/portfolio"}>
             <ButtonOutlinedBlack
               title="see our works"
               data-aos="fade-up"
