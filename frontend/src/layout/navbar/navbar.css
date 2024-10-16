@@ -26,7 +26,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border: 1px solid #f5c477;
+  border: 1px solid var(--primary-green);
   border-radius: var(--bd-radius-64, 64px);
   transform-origin: center;
   animation: fade 20s infinite;
@@ -37,10 +37,10 @@
 
 @keyframes fade {
   0%,
-  5% {
+  10% {
     opacity: 0; /* Fully hidden for the first 10% */
   }
-  5%,
+  10%,
   50% {
     opacity: 1; /* Fully visible from 10% to 50% */
   }

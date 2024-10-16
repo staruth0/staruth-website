@@ -1,11 +1,5 @@
 .project-list {
-  max-width: 2000px;
-  display: flex;
+  padding: 56px 5%;
   margin: 0 auto;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0 50px;
+  margin-top: -2rem;
 }
-
-
-

@@ -47,7 +47,7 @@
 }
 
 .home-what-we-do-section-container-service-cards-container-cards img {
-  height: 300px;
+  height: 250px;
   object-fit: fill;
 
   border-radius: 16px 16px 0px 0px;
@@ -73,6 +73,12 @@
   font-size: 14px;
   font-weight: 100;
   width: 100%;
+}
+
+@media (max-width: 700px) {
+  .home-what-we-do-section-container-service-cards-container-cards img {
+    height: 300px;
+  }
 }
 
 @media (max-width: 400px) {
