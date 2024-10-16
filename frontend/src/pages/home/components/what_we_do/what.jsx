@@ -51,7 +51,7 @@ const WhatWeDoComponent = () => {
               key={index}
               title={service.title}
               description={service.shortDescription}
-              image={service.icon}
+              image={service.gallery[0]}
             />
           ))}
         </div>
