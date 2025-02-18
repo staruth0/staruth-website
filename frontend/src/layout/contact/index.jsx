@@ -1,66 +1,80 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ButtonPrimary } from '../../commons/Button';
 import './contact.css';
 import SuccessCard from '../../commons/successformcard/SuccessCard';
+import AOS from 'aos';
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isSuccess, setIsSuccess] = useState(false)
-  
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [loading, setLoading] = useState(false); // Add loading state
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   function setIsSuccessFalse() {
     setIsSuccess(false);
 
-         setName("");
-         setEmail("");
-         setMessage("");
+    setName('');
+    setEmail('');
+    setMessage('');
   }
 
-   const onSubmit = async (event) => {
-     event.preventDefault();
-     const formData = new FormData(event.target);
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    const formData = new FormData(event.target);
 
-     formData.append("access_key", "a98c48cb-cab5-434d-8015-7c1fd7cc737b");
+    formData.append('access_key', 'a98c48cb-cab5-434d-8015-7c1fd7cc737b');
 
-     const object = Object.fromEntries(formData);
-     const json = JSON.stringify(object);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
-     const res = await fetch("https://api.web3forms.com/submit", {
-       method: "POST",
-       headers: {
-         "Content-Type": "application/json",
-         Accept: "application/json",
-       },
-       body: json,
-     }).then((res) => res.json());
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: json,
+    }).then((res) => res.json());
 
-     if (res.success) {
-       console.log("Success", res);
-       setIsSuccess(true);    
+    setLoading(false);
+    if (res.success) {
+      console.log('Success', res);
+      setIsSuccess(true);
 
-       setTimeout(() => {
-         setIsSuccess(false);
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 4500);
 
-       }, 4500)
-       
-        setName("");
-        setEmail("");
-        setMessage("");
-     }
-
-
-   };
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
+  };
 
   return (
     <>
-      { isSuccess && <SuccessCard setIsSuccessFalse={setIsSuccessFalse}/>}
+      {isSuccess && <SuccessCard setIsSuccessFalse={setIsSuccessFalse} />}
       <div className="container contact-form-section">
-        <h1>Let's get to work</h1>
+        <h1 data-aos="fade-up" data-aos-once="true">
+          Let's get to work
+        </h1>
         <div className="contact-form-container">
-          <p>Tell us about your project. We will be glad to work with you.</p>
+          <p data-aos="fade-up" data-aos-once="true">
+            Tell us about your project. We will be glad to work with you.
+          </p>
 
-          <form action="post" onSubmit={onSubmit}>
+          <form
+            action="post"
+            onSubmit={onSubmit}
+            data-aos="zoom-in"
+            data-aos-once="true"
+          >
             <div className="contact-form-input">
               <label htmlFor="name">Tell us your name</label>
               <input
@@ -96,7 +110,7 @@ const Contact = () => {
               />
             </div>
 
-            <ButtonPrimary title="Submit request" />
+            <ButtonPrimary title="Submit request" disabled={loading} />
           </form>
         </div>
       </div>

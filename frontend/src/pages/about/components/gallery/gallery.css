@@ -24,15 +24,16 @@
 }
 
 .about-gallery-item img {
-  width: 100%; /* Full width of the item */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
   min-height: 150px;
-  display: block; /* Remove bottom space */
+  display: block;
   filter: grayscale(0.9);
+  color: #fff;
 }
 
 .about-gallery-item:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
+  transform: scale(1.05);
 }
 
 .loader {

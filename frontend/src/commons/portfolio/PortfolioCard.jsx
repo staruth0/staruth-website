@@ -1,9 +1,11 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/bundle';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
-import arrowLeft from '../../assets/icons/arrow-left-white.png';
+import arrowLeft from '../../assets/icons/arrow-left-dark.png';
+
+import { useEffect } from 'react';
+import AOS from 'aos';
 
 import './portfolio.css';
 import { Link } from 'react-router-dom';
@@ -15,8 +17,16 @@ const PortfolioCard = ({
   category,
   heroImages,
 }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div className="portfolio-card" data-aos="fade-up">
+    <div
+      className="portfolio-card-white"
+      data-aos="zoom-in"
+      data-aos-once="true"
+    >
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={10}
@@ -37,6 +47,7 @@ const PortfolioCard = ({
         <div className="portfolio-info">
           <h3>{title}</h3>
           <p>{shortDescription}</p>
+          <p style={{ marginBottom: '-8px' }}>How we helped:</p>
           <div className="portfolio-info-departments">
             {category.map((cat, index) => (
               <span key={index}>{cat}</span>

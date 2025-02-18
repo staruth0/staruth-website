@@ -16,7 +16,7 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 18px;
-  border-bottom: 1px solid var(--primary-black);
+  border-bottom: 1px solid var(--white-fade);
 }
 
 .about-meet-team-section-content-heading h1 {

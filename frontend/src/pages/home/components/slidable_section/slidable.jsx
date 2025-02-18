@@ -1,6 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './slidable.css';
 import Slide from './Slide';
+import slide1 from '../../../../assets/images/slide_1.png';
+import slide2 from '../../../../assets/images/slide_2.png';
+import slide3 from '../../../../assets/images/slide_3.png';
+import slide4 from '../../../../assets/images/slide_4.png';
+import slide5 from '../../../../assets/images/slide_5.png';
+import AOS from 'aos';
 
 const HomeSlidableSection = () => {
   const sliderRef = useRef(null);
@@ -10,29 +16,24 @@ const HomeSlidableSection = () => {
   // Array of slide content
   const slidesData = [
     {
-      imgSrc:
-        'https://www.shutterstock.com/image-photo/welcome-on-board-handsome-young-260nw-192136085.jpg',
-      text: 'Slide 1: We build systems that scale your work and solve real problems.',
+      imgSrc: slide1,
+      text: 'We build systems that scale your work and solve real problems.',
     },
     {
-      imgSrc:
-        'https://www.shutterstock.com/image-photo/young-successful-handsome-african-man-600w-529660027.jpg',
-      text: 'Slide 2: Innovating solutions for real-world challenges.',
+      imgSrc: slide2,
+      text: 'systems to manage enterprise, inistitute data and processes.',
     },
     {
-      imgSrc:
-        'https://www.shutterstock.com/image-photo/modern-young-african-man-formalwear-260nw-1593019852.jpg',
-      text: 'Slide 3: Efficiency through technology.',
+      imgSrc: slide3,
+      text: 'build your online brand with an excellently designed portfolio website.',
     },
     {
-      imgSrc:
-        'https://www.shutterstock.com/image-photo/choose-you-handsome-young-african-600w-495634114.jpg',
-      text: 'Slide 4: Collaboration made easy.',
+      imgSrc: slide4,
+      text: 'rebrand and reinvent your existing platforms with converting UX.',
     },
     {
-      imgSrc:
-        'https://www.shutterstock.com/image-photo/young-successful-handsome-african-man-600w-529660027.jpg',
-      text: 'Slide 5: Transforming ideas into reality.',
+      imgSrc: slide5,
+      text: 'customised e-commerce platforms for your products.',
     },
   ];
 
@@ -63,6 +64,10 @@ const HomeSlidableSection = () => {
     return () => clearInterval(scrollInterval); // Cleanup on unmount
   }, [scrollDirection, isScrolling]); // React on direction or scroll state changes
 
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const handleMouseDown = (e) => {
     if (e.button === 0) {
       setIsScrolling(false); // Pause scrolling
@@ -74,7 +79,11 @@ const HomeSlidableSection = () => {
   };
 
   return (
-    <div className="container home-slidable-section">
+    <div
+      className="container home-slidable-section"
+      data-aos="fade-up"
+      data-aos-once="true"
+    >
       <h1 className="container">
         We build systems that scale your work and solve real problems
       </h1>

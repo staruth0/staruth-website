@@ -1,11 +1,18 @@
 .service-skeleton {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 2rem;
-  background-color: var(--on-black);
-  border-radius: 1rem;
 }
 
 .service-skeleton > div {
-  min-height: 300px;
+  background-color: var(--on-black);
+  border-radius: 1rem;
+  min-height: 400px;
+}
+
+@media (max-width: 400px) {
+  .service-skeleton {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
 }

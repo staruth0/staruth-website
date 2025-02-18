@@ -1,0 +1,21 @@
+.portfolio-home-skeleton-dark {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  padding-top: 6rem;
+  width: 100%;
+}
+
+.portfolio-home-skeleton-dark > div {
+  background-color: var(--on-black);
+  border-radius: 1rem;
+  min-height: 500px;
+}
+
+@media (max-width: 1100px) {
+  .portfolio-home-skeleton-dark {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

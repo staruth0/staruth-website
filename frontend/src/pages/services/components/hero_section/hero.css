@@ -9,3 +9,19 @@
   font-size: 48px;
   max-width: 1033px;
 }
+
+@media (max-width: 600px) {
+  .service-hero-section-container {
+    margin-block: 0px !important;
+  }
+
+  .service-hero-section-container p {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 450px) {
+  .service-hero-section-container p {
+    font-size: 32px;
+  }
+}

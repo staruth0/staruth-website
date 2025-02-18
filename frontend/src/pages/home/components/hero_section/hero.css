@@ -99,8 +99,24 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 600px) {
+  .home-hero-section-container-text-n-btns {
+    gap: 1.5rem;
+  }
+  .home-hero-section-container-text-n-btns > h1 {
+    line-height: 1.2;
+  }
+
+  .home-hero-section-container-btn-grp {
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 450px) {
   .home-hero-section-container-btn-grp {
     flex-direction: column;
+    align-items: start;
   }
 }

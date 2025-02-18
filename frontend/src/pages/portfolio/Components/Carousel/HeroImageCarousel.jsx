@@ -23,7 +23,9 @@ const HeroImageCarousel = ({ images }) => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`carousel-image ${index === currentIndex ? 'active' : ''}`}
+            className={`carousel-image ${
+              index === currentIndex ? 'active' : ''
+            }`}
           >
             {index === currentIndex && (
               <div className="image-container">
@@ -35,23 +37,29 @@ const HeroImageCarousel = ({ images }) => {
       </div>
 
       {/* Previous and Next buttons */}
-      <button className="carousel-control prev" onClick={goToPrevious}>
-        &#10094;
-      </button>
-      <button className="carousel-control next" onClick={goToNext}>
-        &#10095;
-      </button>
+      {images.length > 1 && (
+        <>
+          <button className={`carousel-control prev`} onClick={goToPrevious}>
+            &#10094;
+          </button>
+          <button className={`carousel-control next`} onClick={goToNext}>
+            &#10095;
+          </button>
+        </>
+      )}
 
       {/* Indicators (dots) */}
-      <div className="carousel-dots">
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentIndex ? 'active' : ''}`}
-            onClick={() => setSlide(index)}
-          />
-        ))}
-      </div>
+      {images.length > 1 && (
+        <div className="carousel-dots">
+          {images.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${index === currentIndex ? 'active' : ''}`}
+              onClick={() => setSlide(index)}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

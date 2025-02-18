@@ -1,12 +1,17 @@
-import arrow_circle_right from '../../../../assets/icons/arrow_circle_right.svg';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import AOS from 'aos';
 
 const ServiceCard = ({ title, description, image }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <Link
       to="/services"
       className="home-what-we-do-section-container-service-cards-container-cards"
-      data-aos="fade-up"
+      data-aos="zoom-in"
+      data-aos-once="true"
     >
       <img src={image} alt={title} />
       <div className="home-what-we-do-section-container-service-cards-container-card-text-n-btn">

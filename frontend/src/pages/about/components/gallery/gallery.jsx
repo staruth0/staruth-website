@@ -51,7 +51,7 @@ const Aboutgallery = () => {
   }
 
   if (error) {
-    return <div className="error">Error: {error}</div>; // Error handling
+    return <div className="error">Something went wrong</div>; // Error handling
   }
 
   return (
