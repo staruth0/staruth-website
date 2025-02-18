@@ -99,8 +99,8 @@
 	}
 }
 
-/*@media (min-width: 769px) {
+@media (max-width: 600px) {
     .project-card {
-        width: 48%;
+		max-height: 70vh;
     }
-} */
+}

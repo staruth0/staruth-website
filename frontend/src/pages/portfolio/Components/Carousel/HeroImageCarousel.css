@@ -88,3 +88,10 @@
 .carousel-dots .dot.active {
   background-color: #26CE3D;
 }
+
+@media screen and (max-width:600px) {
+  .carousel{
+    max-height: 20vh;
+    background-color: #26CE3D;
+  }
+}
