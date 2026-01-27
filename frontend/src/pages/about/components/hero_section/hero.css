@@ -25,10 +25,9 @@
   line-height: 2.7rem;
   width: 80%;
 }
-.about-hero-section-contentOne h1.mission {
+.about-hero-section-contentOne .mission {
   color: #fff;
-  font-size: 33px;
-  font-style: normal;
+  font-size: 20px;
   font-weight: 600;
   line-height: 2.7rem;
   width: 80%;

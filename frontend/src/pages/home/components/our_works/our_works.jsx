@@ -5,11 +5,15 @@ import PortfolioGrid from '../../../../commons/portfolio/PortfolioGrid';
 import { useState, useEffect } from 'react';
 import Skeleton from '../../../../commons/portfolio/skeleton/Skeleton';
 
+import AOS from 'aos';
+
 const HomeOurWroksSection = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
+    AOS.init({ duration: 1000 });
     fetchProjects();
   }, []);
 
@@ -23,6 +27,7 @@ const HomeOurWroksSection = () => {
       console.log(data);
     } catch (error) {
       console.log(error);
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -30,9 +35,16 @@ const HomeOurWroksSection = () => {
 
   return (
     <div className="container home-our-work-section">
-      <div className="home-our-work-section-header">
+      <div
+        className="home-our-work-section-header"
+        data-aos="fade-up"
+        data-aos-once="true"
+      >
         <h1>Our Works</h1>
       </div>
+      {error && !loading && (
+        <p>Something went wrong, failed to load projects</p>
+      )}
       {loading ? <Skeleton /> : <PortfolioGrid items={projects} />}
       <Link to="/portfolio/">
         <ButtonOutlinedBlack title="more about us" />

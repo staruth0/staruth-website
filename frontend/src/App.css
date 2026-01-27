@@ -43,7 +43,6 @@ html {
   padding: 0;
   margin: 0;
   background-color: var(--primary-black);
-  overflow-x: hidden;
 }
 
 body {
@@ -64,10 +63,6 @@ body {
 .container {
   padding: 56px 5%;
   margin: 0 auto;
-}
-
-.main-body {
-  position: relative;
 }
 
 button {

@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ButtonPrimary } from '../../commons/Button';
 import './contact.css';
 import SuccessCard from '../../commons/successformcard/SuccessCard';
+import AOS from 'aos';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -9,6 +10,10 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
   const [loading, setLoading] = useState(false); // Add loading state
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   function setIsSuccessFalse() {
     setIsSuccess(false);
@@ -56,11 +61,20 @@ const Contact = () => {
     <>
       {isSuccess && <SuccessCard setIsSuccessFalse={setIsSuccessFalse} />}
       <div className="container contact-form-section">
-        <h1>Let's get to work</h1>
+        <h1 data-aos="fade-up" data-aos-once="true">
+          Let's get to work
+        </h1>
         <div className="contact-form-container">
-          <p>Tell us about your project. We will be glad to work with you.</p>
+          <p data-aos="fade-up" data-aos-once="true">
+            Tell us about your project. We will be glad to work with you.
+          </p>
 
-          <form action="post" onSubmit={onSubmit}>
+          <form
+            action="post"
+            onSubmit={onSubmit}
+            data-aos="zoom-in"
+            data-aos-once="true"
+          >
             <div className="contact-form-input">
               <label htmlFor="name">Tell us your name</label>
               <input

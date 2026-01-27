@@ -1,9 +1,10 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/bundle';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import arrowLeft from '../../assets/icons/arrow-left-dark.png';
+import { useEffect } from 'react';
+import AOS from 'aos';
 
 import './portfolio.css';
 import { Link } from 'react-router-dom';
@@ -15,8 +16,16 @@ const PortfolioCard = ({
   category,
   heroImages,
 }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div className="portfolio-card-dark" data-aos="fade-up">
+    <div
+      className="portfolio-card-dark"
+      data-aos="zoom-in"
+      data-aos-once="true"
+    >
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={10}

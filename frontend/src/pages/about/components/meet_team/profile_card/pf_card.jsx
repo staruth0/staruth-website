@@ -6,6 +6,7 @@ import twitterX from '../../../../../assets/images/twitter-x.svg';
 import defaultProfileImage from '../../../../../assets/images/defaultProfileImage.svg'; // Fallback image
 import './pf_card.css';
 import TeamSkeleton from '../skeleton/TeamSkeleton';
+import AOS from 'aos';
 
 const ProfileCard = () => {
   const [teamMembers, setTeamMembers] = useState([]);
@@ -14,6 +15,7 @@ const ProfileCard = () => {
 
   // Fetch team members data from the API
   useEffect(() => {
+    AOS.init({ duration: 1000 });
     const fetchTeamMembers = async () => {
       try {
         const response = await fetch(
@@ -50,7 +52,12 @@ const ProfileCard = () => {
   return (
     <div className="team-members-grid">
       {teamMembers.map((member) => (
-        <div key={member._id} className="pf_card">
+        <div
+          key={member._id}
+          className="pf_card"
+          data-aos="zoom-in"
+          data-aos-once="true"
+        >
           <Link to={`/about/team/${member._id}`}>
             <img
               src={member.image || defaultProfileImage}

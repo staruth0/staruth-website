@@ -17,7 +17,7 @@ const NavbarComponent = ({ whiteNavbar }) => {
     <nav className={`navbar-component ${whiteNavbar && 'white-navbar'}`}>
       <div className="navbar-component-logo-label">
         <img src={logo} alt="logo" />
-        <span>Staruth tech</span>
+        <span>Staruth Tech</span>
       </div>
 
       {/* desktop nav */}

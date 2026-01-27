@@ -1,11 +1,16 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import left_navigator from '../../../../../assets/icons/expand_circle_left.png';
 import right_navigator from '../../../../../assets/icons/expand_circle_right.png';
+import AOS from 'aos';
 
 function ServiceCard({ service }) {
   const { title, longDescription, gallery, icon } = service;
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const imageContainerRef = useRef(null);
 
@@ -29,7 +34,11 @@ function ServiceCard({ service }) {
   };
 
   return (
-    <div className="services-our-services-section-container" data-aos="zoom-in">
+    <div
+      className="services-our-services-section-container"
+      data-aos="zoom-in"
+      data-aos-once="true"
+    >
       <div className="services-our-services-section-header">
         <div>
           <img src={icon} alt="service icon" className="service-icon" />

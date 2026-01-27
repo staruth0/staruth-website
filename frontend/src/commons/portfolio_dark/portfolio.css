@@ -108,3 +108,10 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 670px) {
+  .portfolio-card-dark .portfolio-details {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

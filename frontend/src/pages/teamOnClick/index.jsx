@@ -33,7 +33,7 @@ const TeamPage = () => {
   if (loading) {
     return (
       <div className="about-page">
-        <div className="team_onclick_loding">Loading member details...</div>
+        <div className="team_onclick_loding"></div>
       </div>
     );
   }

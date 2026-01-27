@@ -18,7 +18,6 @@ const ProjectList = () => {
       );
       const data = await response.json();
       setProjects(data);
-      console.log(data);
     } catch (error) {
       console.log(error);
     } finally {
@@ -26,7 +25,7 @@ const ProjectList = () => {
     }
   };
   return (
-    <div className="project-list">
+    <div className="project-list ">
       {loading ? <Skeleton /> : <PortfolioGrid items={projects} />}
     </div>
   );
